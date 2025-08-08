@@ -9,7 +9,8 @@
 
 ## 🎮 **Live Demo**
 
-*Coming soon! App will be deployed to Vercel with custom domain.*
+- **[Koopa Chart](https://koopa-vgm.vercel.app)** - Interactive chart with all 45 tracks
+- **[How I Made Koopa](https://koopa-vgm.vercel.app/how-i-made-koopa)** - Full case study breakdown
 
 ---
 

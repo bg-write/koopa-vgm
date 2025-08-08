@@ -50,7 +50,7 @@ export default function Home() {
           {/* Tech Stack Footer */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from the Internet. <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">Check out Koopa's GitHub.</a>
+              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from the Internet. <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">Check out Koopa&apos;s GitHub.</a>
             </p>
             <div className="flex justify-center space-x-6 text-sm">
                               <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>

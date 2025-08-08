@@ -167,7 +167,7 @@ export default function KoopaChart() {
          * - YouTube weighted lower (40%) due to mixed content (music + video)
          * - YouTube views normalized to 0-100 scale for fair comparison
          */
-        const transformedData = jsonData.map((row: any, index: number) => {
+        const transformedData = (jsonData as Record<string, any>[]).map((row: Record<string, any>, index: number) => {
           const trackName = row.track_name || row['Track Name'] || '';
           const artwork = getTrackArtwork(trackName);
           

@@ -25,7 +25,7 @@ export default function ClickableTitle() {
             fontFamily: 'var(--font-header)'
           }}
         >
-                               🎮 Koopa: The Most Beloved Video Game Music Ever Made?
+                               🎮 Koopa: The Most Beloved Video Game Music Ever?
         </h1>
       </a>
     </div>

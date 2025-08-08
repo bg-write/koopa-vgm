@@ -16,7 +16,7 @@ export default function ExecutiveSummary() {
           </p>
           <h3 className="text-lg font-semibold text-koopa-green mb-2">My Takeaway</h3>
           <p className="text-gray-700 italic">
-            There are at least seven specific &ldquo;Superstar&rdquo; tracks with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
+            There are at least seven specific <strong>&ldquo;Superstar&rdquo; tracks</strong> with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
           </p>
         </div>
         <div>

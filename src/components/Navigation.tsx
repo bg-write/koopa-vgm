@@ -47,7 +47,7 @@ export default function Navigation() {
             </svg>
           </a>
           <a 
-            href="https://github.com/bg-write" 
+                          href="https://github.com/bg-write/koopa-vgm" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white hover:text-koopa-yellow transition-colors"

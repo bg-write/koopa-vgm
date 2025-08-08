@@ -245,7 +245,7 @@ export default function KoopaChart() {
           </tr>
         </thead>
         <tbody className="divide-y divide-koopa-green/10">
-          {chartData.map((track, index) => (
+          {chartData.map((track) => (
             <tr key={track.rank} className={`hover:bg-gradient-to-r hover:from-koopa-green/10 hover:to-koopa-cream/20 transition-all duration-300 ${
               track.rank <= 10 ? 'bg-gradient-to-r from-amber-50/40 to-yellow-50/40' :
               track.rank <= 20 ? 'bg-gradient-to-r from-blue-50/30 to-indigo-50/30' :

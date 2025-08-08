@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import Link from 'next/link';
 import MarkdownContent from '../../components/MarkdownContent';
 import ScrollSection from '../../components/ScrollSection';
 
@@ -38,12 +39,12 @@ export default function HowIMadeKoopa() {
           {/* Tech Stack Footer */}
           <div className="mt-12 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. <a href="https://github.com/bg-write" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">Check out Koopa's GitHub.</a>
+              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from the Internet. <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">Check out Koopa's GitHub.</a>
             </p>
             <div className="flex justify-center space-x-2 text-sm">
-              <a href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</a>
+              <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
               <span className="text-gray-400">|</span>
-              <a href="/how-i-made-koopa" className="text-koopa-green hover:text-koopa-green-dark underline">How I Made Koopa</a>
+              <Link href="/how-i-made-koopa" className="text-koopa-green hover:text-koopa-green-dark underline">How I Made Koopa</Link>
             </div>
           </div>
         </section>

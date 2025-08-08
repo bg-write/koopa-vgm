@@ -9,8 +9,7 @@
 
 ## 🎮 **Live Demo**
 
-- **[Koopa Chart](https://koopa-vgm.vercel.app)** - Interactive chart with all 45 tracks
-- **[How I Made Koopa](https://koopa-vgm.vercel.app/how-i-made-koopa)** - Full case study breakdown
+*Coming soon! App will be deployed to Vercel with custom domain.*
 
 ---
 
@@ -76,7 +75,7 @@
 ## 🏗️ **Project Structure**
 
 ```
-koopa-case-study/
+koopa-vgm/
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx                 # Homepage with interactive chart
@@ -126,14 +125,14 @@ koopa-case-study/
 ## 🚀 **Getting Started**
 
 ### **Prerequisites**
-- Node.js 18+ 
+- Node.js 22+ 
 - npm or yarn
 
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/koopa-case-study.git
-cd koopa-case-study
+git clone https://github.com/bg-write/koopa-vgm.git
+cd koopa-vgm
 
 # Install dependencies
 npm install

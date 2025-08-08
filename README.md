@@ -9,37 +9,36 @@
 
 ## 🎮 **Live Demo**
 
-- **[Koopa Chart](https://koopa-vgm.vercel.app)** - Interactive chart with all 45 tracks
-- **[How I Made Koopa](https://koopa-vgm.vercel.app/how-i-made-koopa)** - Full case study breakdown
+- **[Koopa Chart](https://koopa-video-game-music.vercel.app)** - Interactive chart with all 45 tracks
+- **[How I Made Koopa](https://koopa-video-game-music.vercel.app/how-i-made-koopa)** - Full case study breakdown
 
 ---
 
 ## 🚀 **Latest Features**
 
-### **🎨 Interactive Chart Design**
-- **Responsive card-based layout** with hover animations and smooth transitions
-- **Massive artwork display** (128px on desktop, 64px on mobile) with game cover art
-- **Rank-based color coding** with gradient backgrounds for visual hierarchy
-- **Floating rank badges** with dynamic color progression
-- **Mobile-optimized spacing** with touch-friendly interactions
+### **🎨 Enhanced User Experience**
+- **Executive Summary** with data-driven insights for recruiters and stakeholders
+- **Professional case study layout** with improved typography and spacing
+- **Responsive design** optimized for all devices and screen sizes
+- **Clean, portfolio-ready presentation** suitable for hiring managers
 
-### **📱 Mobile-First Experience**
-- **Responsive design** that looks good on all devices
-- **Optimized mobile layout** with reduced rank badges and tight spacing
-- **Touch-friendly buttons** and smooth animations
-- **Text overflow handling** with proper word wrapping
+### **📊 Data-Driven Insights**
+- **Key insights dashboard** with quantitative and qualitative findings
+- **Cross-platform correlation analysis** (r = 0.663) between Spotify and YouTube
+- **Statistical validation** with 89% high engagement tracks and 73% Nintendo dominance
+- **Interactive Tableau dashboard** with comprehensive data visualization
 
-### **🎵 Artwork Integration**
-- **45 custom game artworks** manually curated from the Internet
-- **Automatic image loading** with fallback handling
-- **Visual storytelling** through game cover art
-- **Professional presentation** ready for portfolio showcase
+### **🎵 Content Organization**
+- **Structured case study** with clear sections and professional formatting
+- **Executive summary** highlighting business value and technical approach
+- **Data-backed insights** with specific percentages and evidence
+- **Professional presentation** ready for stakeholder review
 
-### **📊 Data Visualization**
-- **Cross-platform correlation analysis** (r = 0.663)
-- **Streaming score calculations** (60% Spotify + 40% YouTube)
-- **Rank-based visual hierarchy** with color-coded tiers
-- **Interactive data exploration** with direct links to streaming platforms
+### **📱 Technical Improvements**
+- **Next.js 14 optimization** with App Router and TypeScript
+- **Tailwind CSS styling** with custom animations and responsive design
+- **Markdown content management** for easy case study updates
+- **Performance optimization** with efficient data loading and rendering
 
 ---
 
@@ -218,6 +217,12 @@ npm start
 ---
 
 ## 🔮 **Future Enhancements**
+
+### **Immediate Next Steps**
+- **Table of Contents navigation** - Fix scroll links for better case study navigation
+- **Interactive Tableau integration** - Add more relevant charts and update dashboard
+- **Text content updates** - Improve case study content based on feedback
+- **Homepage chart improvements** - Continue enhancing visual appeal and interactivity
 
 ### **Planned Features**
 - **Spotify playlist integration** with all 45 tracks

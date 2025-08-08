@@ -16,7 +16,7 @@ export default function ClickableTitle() {
         className="inline-block hover:opacity-80 transition-opacity"
       >
         <h1 
-          className="text-4xl md:text-4xl font-bold mb-6"
+          className="text-4xl md:text-4xl font-bold mb-3 md:mb-6"
           style={{
             background: 'linear-gradient(to right, #228B22, #32CD32)',
             WebkitBackgroundClip: 'text',
@@ -25,7 +25,7 @@ export default function ClickableTitle() {
             fontFamily: 'var(--font-header)'
           }}
         >
-          🎮 Koopa: A New Video Game Music Canon
+                               🎮 Koopa: The Most Beloved Video Game Music Ever Made?
         </h1>
       </a>
     </div>

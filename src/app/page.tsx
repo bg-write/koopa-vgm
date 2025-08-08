@@ -14,29 +14,36 @@ export default function Home() {
           <ClickableTitle />
           
           {/* Top Koopa and Description */}
-          <div className="flex flex-col md:flex-row items-center justify-center mb-8 gap-2 md:gap-6">
-            <div className="text-center md:text-left">
-              <p className="text-lg text-gray-700 mb-4 italic font-bold">
-                Using Spotify and YouTube data to find the &quot;classic rock&quot; of video game music.
-              </p>
+          <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-2 md:gap-6">
+            {/* Koopa image - shown first on mobile */}
+            <div className="order-1 md:order-2 pt-1 pb-4 md:pt-0 md:pb-0">
+              <img 
+                src="/Koopa_Troopa_by_Shigehisa_Nakaue.png" 
+                alt="Koopa Troopa" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain animate-bounce transform scale-x-[-1]"
+                style={{
+                  animation: 'walking 2s ease-in-out infinite'
+                }}
+              />
+            </div>
+            
+            <div className="text-left order-2 md:order-1">
+              {/* What is Koopa? - Simple explanation */}
+              <div className="bg-white rounded-lg shadow-lg p-4 mb-4 border-l-4 border-koopa-green max-w-2xl">
+                <h3 className="text-lg font-semibold text-koopa-green mb-2">What is Koopa?</h3>
+                <p className="text-gray-700 mb-0">
+                  A data-driven analysis of video game music popularity using <strong>Spotify and YouTube streaming data</strong>. Think of it like a Billboard chart for video game music—identifying which tracks are actually being listened to today, not just historically important.
+                </p>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center md:justify-start">
                 <a 
                   href="/how-i-made-koopa"
                   className="text-koopa-green hover:text-koopa-green-dark underline decoration-koopa-green/60 hover:decoration-koopa-green transition-all duration-200"
                 >
-                  Read the full case study.
+                  Read the Executive Summary and full Case Study.
                 </a>
               </div>
-            </div>
-            <div className="pt-4 md:pt-0">
-              <img 
-                src="/Koopa_Troopa_by_Shigehisa_Nakaue.png" 
-                alt="Koopa Troopa" 
-                className="w-20 h-20 md:w-24 md:h-24 object-contain animate-bounce transform scale-x-[-1]"
-                style={{
-                  animation: 'walking 2s ease-in-out infinite'
-                }}
-              />
             </div>
           </div>
           
@@ -50,7 +57,7 @@ export default function Home() {
           {/* Tech Stack Footer */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from the Internet. <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">Check out Koopa&apos;s GitHub.</a>
+              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
             </p>
             <div className="flex justify-center space-x-6 text-sm">
                               <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>

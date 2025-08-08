@@ -22,7 +22,7 @@ export default function HowIMadeKoopa() {
       <ScrollSection>
         <section className="max-w-4xl mx-auto px-6 py-12">
           {/* Animated Koopa at the top */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-4 md:mb-8">
             <img 
               src="/Koopa_Troopa_by_Shigehisa_Nakaue.png" 
               alt="Koopa Troopa" 
@@ -47,7 +47,7 @@ export default function HowIMadeKoopa() {
             >
               How I Made Koopa
             </h1>
-            <p className="text-lg text-gray-600 italic mb-4">Using Spotify and YouTube streaming data to find out: what video game music do fans actually listen to the most?</p>
+            <p className="text-gray-700 mb-4">Using Spotify and YouTube streaming data to find out: What video game music do fans actually listen to the most?</p>
             <p className="text-gray-700"><strong>By Brady Gerber</strong></p>
           </div>
           
@@ -62,7 +62,7 @@ export default function HowIMadeKoopa() {
           {/* Tech Stack Footer */}
           <div className="mt-12 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
+              Built with Next.js, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber. Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
             </p>
             <div className="flex justify-center space-x-2 text-sm">
               <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>

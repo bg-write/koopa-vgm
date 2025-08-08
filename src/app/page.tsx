@@ -14,7 +14,7 @@ export default function Home() {
           <ClickableTitle />
           
           {/* Top Koopa and Description */}
-          <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-2 md:gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-4 gap-2 md:gap-6">
             {/* Koopa image - shown first on mobile */}
             <div className="order-1 md:order-2 pt-1 pb-4 md:pt-0 md:pb-0">
               <img 
@@ -48,7 +48,6 @@ export default function Home() {
           </div>
           
 
-
           {/* Chart Table */}
           <KoopaChart />
           
@@ -57,10 +56,10 @@ export default function Home() {
           {/* Tech Stack Footer */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js 14, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
+              Built with Next.js, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber. Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
             </p>
             <div className="flex justify-center space-x-6 text-sm">
-                              <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
+              <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
               <span className="text-gray-400">|</span>
               <a href="/how-i-made-koopa" className="text-koopa-green hover:text-koopa-green-dark underline">How I Made Koopa</a>
             </div>

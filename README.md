@@ -29,12 +29,14 @@
 - **Clean, portfolio-ready presentation** suitable for hiring managers
 - **Interactive Table of Contents** with smooth scrolling navigation
 - **Back-to-top links** for convenient navigation throughout the case study
+- **Mobile-optimized spacing** with improved bullet point layout and navigation
 
 ### **📊 Data-Driven Insights**
 - **Key insights dashboard** with quantitative and qualitative findings
 - **Cross-platform correlation analysis** (r = 0.663) between Spotify and YouTube
-- **Statistical validation** with 89% high engagement tracks and 73% Nintendo dominance
+- **Statistical validation** with 24% high engagement tracks and 38% Nintendo representation
 - **Interactive Tableau dashboard** with comprehensive data visualization
+- **Fact-checked accuracy** with verified statistics across all content
 
 ### **🎵 Content Organization**
 - **Structured case study** with clear sections and professional formatting
@@ -69,12 +71,13 @@
 ### **Statistical Validation**
 - **Cross-platform correlation**: Strong positive correlation (r = 0.663) between Spotify popularity and YouTube views
 - **Data quality**: 100% completion for core fields, 95% for YouTube data, zero duplicates
-- **Sample size**: 45 tracks from 25+ unique game IPs across 30 years (1984-2024)
+- **Sample size**: 45 tracks from 25+ unique game IPs across 30 years (1985-2025)
 
 ### **Key Performance Metrics**
-- **Seven superstar tracks** identified with 50M+ combined reach
+- **17 superstar tracks** identified with 50M+ combined reach
 - **69% data-driven discovery** vs 31% expert curated approach
 - **Balanced representation**: 15 originals, 17 covers, 9 rereleases, 4 remixes
+- **Modern dominance**: 91% of tracks from 2010+ showing contemporary VGM appeal
 
 ### **Technical Achievements**
 - **API integration**: Successfully combined Spotify, YouTube, and RAWG APIs
@@ -190,6 +193,14 @@ npm start
 - **Discovery distribution** showing data-driven vs curated approach
 - **[View Full Dashboard](https://public.tableau.com/views/VideoGameMusicCanonAnalysis/OverallAnalysisDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
+**Planned Enhancements:**
+- **6 new business-focused charts** for stakeholder decision-making
+- **Nintendo dominance analysis** (38% representation)
+- **Superstar tracks visualization** (17 tracks with 50M+ reach)
+- **Time distribution analysis** (9% pre-2010, 91% modern)
+- **Song type performance** (covers vs originals)
+- **Platform performance heat map** (gaming ecosystem analysis)
+
 ---
 
 ## 🛠️ **Technical Challenges Overcome**
@@ -265,6 +276,7 @@ npm start
 ## 🔮 **Future Enhancements**
 
 ### **Immediate Next Steps**
+- **Tableau dashboard integration** with 6 new business-focused charts
 - **Advanced filtering** by game, year, or genre
 - **Interactive data exploration** with drill-down capabilities
 - **Social sharing** with track-specific links

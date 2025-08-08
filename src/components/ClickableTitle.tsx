@@ -9,7 +9,7 @@ export default function ClickableTitle() {
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-4 md:mb-8">
       <a 
         href="#"
         onClick={handleClick}
@@ -25,7 +25,7 @@ export default function ClickableTitle() {
             fontFamily: 'var(--font-header)'
           }}
         >
-                               🎮 Koopa: The Most Beloved Video Game Music Ever?
+          🎮 Koopa: The Most Beloved Video Game Music Ever?
         </h1>
       </a>
     </div>

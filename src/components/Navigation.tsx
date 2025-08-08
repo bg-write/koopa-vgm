@@ -10,7 +10,7 @@ export default function Navigation() {
         {/* Logo/Title */}
         <Link href="/" className="text-xl font-header font-bold hover:opacity-80 transition-opacity text-white">
           <div className="block md:inline">Koopa </div>
-          <div className="block md:inline text-lg md:text-xl">by Brady Gerber</div>
+          <div className="block md:inline text-sm md:text-xl">by Brady Gerber</div>
         </Link>
         
         {/* Social Media Icons */}
@@ -47,7 +47,7 @@ export default function Navigation() {
             </svg>
           </a>
           <a 
-                          href="https://github.com/bg-write/koopa-vgm" 
+            href="https://github.com/bg-write/koopa-vgm" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white hover:text-koopa-yellow transition-colors"

@@ -385,12 +385,12 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 ### **Key Business Insights & Data Patterns**
 
 **🎯 Top-Performing Franchises:**
-- **Nintendo dominates:** 73% of top 15 tracks are from Mario, Zelda, or Donkey Kong franchises
+- **Nintendo representation:** 38% of all tracks are from Mario, Zelda, or Donkey Kong franchises
 - **Modern hits emerge:** Cyberpunk 2077 (#1) and ULTRAKILL (#7, #11, #14) show strong contemporary appeal
-- **Classic longevity:** 67% of tracks are from games released before 2010, proving classic VGM's lasting popularity
+- **Modern dominance:** 91% of tracks are from games released after 2010, showing modern VGM's current popularity
 
 **📊 Streaming Performance Analysis:**
-- **Spotify engagement:** 89% of tracks have popularity scores above 50, indicating strong current listenership
+- **Spotify engagement:** 24% of tracks have popularity scores above 50, indicating selective high engagement
 - **YouTube reach:** Top 5 tracks average 32M+ views, showing massive cross-platform appeal
 - **Platform correlation:** Tracks performing well on Spotify tend to also perform well on YouTube (r = 0.72)
 
@@ -559,7 +559,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **Q: Which tracks should make the final playlist?**
 
-**A:** The data identified seven "superstar tracks" with 50M+ combined reach that should anchor any VGM playlist:
+**A:** The data identified 17 "superstar tracks" with 50M+ combined reach that should anchor any VGM playlist. Here are the top 7 performers:
 1. Cyberpunk 2077 - "I Really Want to Stay at Your House" (78 popularity, 62M views)
 2. Halo - "Halo Theme" (54 popularity, 52M views)
 3. Minecraft - "Sweden" (70 popularity, 26M views)
@@ -567,6 +567,8 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 5. Tetris - "Tetris Theme" (46 popularity, 19M views)
 6. Doom - "At Doom's Gate" (61 popularity, 12M views)
 7. ULTRAKILL - "Tenebre Rosso Sangue" (60 popularity, 10M views)
+
+*Note: An additional 10 tracks also meet the 50M+ combined reach threshold, demonstrating the depth of quality VGM content available.*
 
 **Q: How does this solve the streaming company's problem?**
 

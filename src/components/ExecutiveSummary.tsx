@@ -16,7 +16,7 @@ export default function ExecutiveSummary() {
           </p>
           <h3 className="text-lg font-semibold text-koopa-green mb-2">My Takeaway</h3>
           <p className="text-gray-700 italic">
-            There are at least seven specific <strong>&ldquo;Superstar&rdquo; tracks</strong> with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
+            There are <strong>17 &ldquo;Superstar&rdquo; tracks</strong> with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
           </p>
         </div>
         <div>
@@ -26,7 +26,7 @@ export default function ExecutiveSummary() {
             <li>• <strong>Three data sources:</strong> Spotify API, YouTube API, RAWG API</li>
             <li>• <strong>Key deliverables:</strong> Interactive chart, Tableau dashboard, comprehensive case study</li>
           </ul>
-                      <div className="bg-koopa-green/10 p-3 rounded-lg border border-koopa-green/20 mt-6">
+          <div className="bg-koopa-green/10 p-3 rounded-lg border border-koopa-green/20 mt-6">
             <p className="text-gray-700 mb-2">
               <strong>📊 Interactive Dashboard:</strong> Explore the full analysis with interactive visualizations
             </p>
@@ -45,12 +45,12 @@ export default function ExecutiveSummary() {
       {/* Bottom row: Key Insights in two columns */}
       <div>
         <h3 className="text-lg font-semibold text-koopa-green mb-2">Key Insights</h3>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-6">
           <div>
             <ul className="text-gray-700 space-y-2">
-              <li>• <strong>73%</strong> of top tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
-              <li>• <strong>89%</strong> of tracks have Spotify popularity scores above 50 (out of 100 - indicating strong current listenership)</li>
-              <li>• <strong>67%</strong> of games were released before 2010, showing classic VGM&apos;s lasting appeal</li>
+              <li>• <strong>38%</strong> of tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
+              <li>• <strong>24%</strong> of tracks have Spotify popularity scores above 50 (out of 100 - indicating strong current listenership)</li>
+              <li>• <strong>9%</strong> of games were released before 2010, showing modern VGM&apos;s dominance</li>
               <li>• <strong>38% covers</strong> performed well but <strong>33% originals</strong> showed slightly better engagement</li>
             </ul>
           </div>

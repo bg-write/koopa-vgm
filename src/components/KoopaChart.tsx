@@ -68,6 +68,45 @@ interface ChartTrack {
   spotifyArtwork?: string;
 }
 
+interface ExcelRow {
+  track_name?: string;
+  'Track Name'?: string;
+  game_name?: string;
+  'Game'?: string;
+  spotify_artist_name?: string;
+  'Artist'?: string;
+  spotify_popularity?: number;
+  'Spotify Score'?: number;
+  youtube_views?: string;
+  'YouTube Views'?: string;
+  streaming_ranking?: number;
+  'Streaming Ranking'?: number;
+  spotify_release_year?: string;
+  'Spotify Release Year'?: string;
+  game_release_date?: string;
+  'Release Date'?: string;
+  game_genres?: string;
+  'Genres'?: string;
+  song_type?: string;
+  'Song Type'?: string;
+  game_rating?: number;
+  'Game Rating'?: number;
+  game_metacritic?: number;
+  'Metacritic'?: number;
+  game_platforms?: string;
+  'Platforms'?: string;
+  game_developers?: string;
+  'Developer'?: string;
+  game_publishers?: string;
+  'Publisher'?: string;
+  discovery_source?: string;
+  'Discovery Source'?: string;
+  popular_spotify_link?: string;
+  'Spotify Link'?: string;
+  original_youtube_link?: string;
+  'YouTube Link'?: string;
+}
+
 export default function KoopaChart() {
   const [chartData, setChartData] = useState<ChartTrack[]>([]);
   const [loading, setLoading] = useState(true);
@@ -167,7 +206,7 @@ export default function KoopaChart() {
          * - YouTube weighted lower (40%) due to mixed content (music + video)
          * - YouTube views normalized to 0-100 scale for fair comparison
          */
-        const transformedData = (jsonData as Record<string, any>[]).map((row: Record<string, any>, index: number) => {
+        const transformedData = (jsonData as ExcelRow[]).map((row: ExcelRow, index: number) => {
           const trackName = row.track_name || row['Track Name'] || '';
           const artwork = getTrackArtwork(trackName);
           

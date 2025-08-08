@@ -286,7 +286,7 @@ def validate_data_quality(df):
 **Final Dataset Stats:**
 - **45 tracks** (down from 175 initial collection)
 - **100% completion** for core fields (track name, artist, popularity)
-- **95% completion** for YouTube view counts
+- **100% completion** for YouTube view counts
 - **Zero duplicates** after standardization
 - **Consistent data types** across all fields
 
@@ -387,12 +387,12 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 **🎯 Top-Performing Franchises:**
 - **Nintendo representation:** 38% of all tracks are from Mario, Zelda, or Donkey Kong franchises
 - **Modern hits emerge:** Cyberpunk 2077 (#1) and ULTRAKILL (#7, #11, #14) show strong contemporary appeal
-- **Modern dominance:** 91% of tracks are from games released after 2010, showing modern VGM's current popularity
+- **Classic VGM's lasting appeal:** Only 9% of tracks have Spotify releases credited before 2010, but 56% of games were originally released before 2010, showing classic VGM's enduring popularity through streaming platforms
 
 **📊 Streaming Performance Analysis:**
 - **Spotify engagement:** 24% of tracks have popularity scores above 50, indicating selective high engagement
 - **YouTube reach:** Top 5 tracks average 32M+ views, showing massive cross-platform appeal
-- **Platform correlation:** Tracks performing well on Spotify tend to also perform well on YouTube (r = 0.72)
+- **Platform correlation:** Tracks performing well on Spotify tend to also perform well on YouTube (r = 0.663)
 
 **🎮 Genre Distribution:**
 - **Platformers lead:** 40% of tracks are from platformer games (Mario, Sonic, Donkey Kong)
@@ -420,9 +420,11 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 - `youtube_views` - Total YouTube view count
 - `streaming_ranking` - Our combined score (60% Spotify + 40% YouTube)
 - `spotify_release_year` - When the track was released on Spotify
+  <!-- TODO: CHECK - This is different from game_release_date. Many classic tracks have recent Spotify releases -->
 
 **Game Metadata (from RAWG):**
 - `game_release_date` - When the game was originally released
+  <!-- TODO: CHECK - This is the actual game release year, which may be much earlier than Spotify release year -->
 - `game_rating` - User rating (0-5 scale)
 - `game_metacritic` - Metacritic score (0-100)
 - `game_platforms` - All platforms the game is available on
@@ -469,10 +471,14 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 - Tracks that people genuinely love tend to perform well across different streaming services
 
 **Temporal Trends:**
-- **Release year range:** 1995-2025 (30-year span)
-- **Peak years:** 2020 (8 tracks), 2011 (5 tracks), 2015/2018 (4 tracks each)
-- **Recent bias:** 18 tracks from 2020+ vs 4 tracks pre-2010
-- **Average gap:** 10.4 years between game release and Spotify release
+- **Spotify release year range:** 1995-2025 (30-year span)
+  <!-- TODO: CHECK - This refers to Spotify release years, not game release years. Need to clarify this distinction -->
+- **Peak Spotify release years:** 2020 (8 tracks), 2011 (5 tracks), 2015/2018 (4 tracks each)
+  <!-- TODO: CHECK - These are Spotify release years, not game release years -->
+- **Spotify release bias:** 18 tracks from 2020+ vs 4 tracks pre-2010
+  <!-- TODO: CHECK - This refers to Spotify releases, not game releases. Many classic games have recent Spotify releases -->
+- **Average gap:** 11.7 years between game release and Spotify release
+  <!-- TODO: CHECK - This is the key insight - the gap between when a game was released vs when its music was added to Spotify -->
 
 **Platform Performance Patterns:**
 - **PC leads:** 21 tracks (47%) - reflects modern gaming trends

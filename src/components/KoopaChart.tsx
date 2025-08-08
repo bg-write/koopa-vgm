@@ -56,7 +56,7 @@ interface ChartTrack {
   spotify: number;
   youtube: string;
   ranking: number;
-  release: string;
+  spotifyRelease: number;
   genres: string;
   type: string;
   rating: number;
@@ -68,6 +68,7 @@ interface ChartTrack {
   spotifyLink?: string;
   youtubeLink?: string;
   spotifyArtwork?: string;
+  gameRelease?: number;
 }
 
 export default function KoopaChart() {

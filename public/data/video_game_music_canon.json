@@ -7,7 +7,7 @@
     "spotify": 78,
     "youtube": 61991137,
     "ranking": 100,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Action, Shooter, RPG",
     "type": "original",
     "rating": 4.21,
@@ -18,7 +18,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/7mykoq6R3BArsSpNDjFQTm?si=1242cdc7a7914d18",
     "youtubeLink": "https://www.youtube.com/watch?v=KvMY1uzSC1E&list=RDKvMY1uzSC1E&start_radio=1",
-    "spotifyArtwork": "/images/i-really-want-to-stay-at-your-house.jpg"
+    "spotifyArtwork": "/images/i-really-want-to-stay-at-your-house.jpg",
+    "gameRelease": 2020
   },
   {
     "rank": 2,
@@ -28,7 +29,7 @@
     "spotify": 70,
     "youtube": 25846262,
     "ranking": 91,
-    "release": 2011,
+    "spotifyRelease": 2011,
     "genres": "Action, Simulation, Arcade, Massively Multiplayer, Indie",
     "type": "original",
     "rating": 4.43,
@@ -39,7 +40,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/4NsPgRYUdHu2Q5JRNgXYU5?si=300341f6484c4a25",
     "youtubeLink": "https://www.youtube.com/watch?v=aBkTkxKDduc&list=RDaBkTkxKDduc&start_radio=1",
-    "spotifyArtwork": "/images/sweden.png"
+    "spotifyArtwork": "/images/sweden.png",
+    "gameRelease": 2011
   },
   {
     "rank": 3,
@@ -49,7 +51,7 @@
     "spotify": 63,
     "youtube": 4685657,
     "ranking": 82,
-    "release": 2013,
+    "spotifyRelease": 2013,
     "genres": "Action, Adventure",
     "type": "original",
     "rating": 4.54,
@@ -60,7 +62,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/285ieonEuLkll3zknYK2TY?si=9169e41f7bba421b",
     "youtubeLink": "https://www.youtube.com/watch?v=Pt1pOY3_W64&list=RDPt1pOY3_W64&start_radio=1",
-    "spotifyArtwork": "/images/the-last-of-us.jpg"
+    "spotifyArtwork": "/images/the-last-of-us.jpg",
+    "gameRelease": 2013
   },
   {
     "rank": 4,
@@ -70,7 +73,7 @@
     "spotify": 54,
     "youtube": 51860948,
     "ranking": 80,
-    "release": 2002,
+    "spotifyRelease": 2002,
     "genres": "Action, Shooter",
     "type": "original",
     "rating": 4.32,
@@ -81,7 +84,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/6DhcuZbi4FW28RLicWNmmx?si=2dd140999d9a422b",
     "youtubeLink": "https://www.youtube.com/watch?v=0jXTBAGv9ZQ&list=RD0jXTBAGv9ZQ&start_radio=1",
-    "spotifyArtwork": "/images/halo.jpg"
+    "spotifyArtwork": "/images/halo.jpg",
+    "gameRelease": 2001
   },
   {
     "rank": 5,
@@ -91,7 +95,7 @@
     "spotify": 51,
     "youtube": 16105224,
     "ranking": 75,
-    "release": 2019,
+    "spotifyRelease": 2019,
     "genres": "Action, Adventure, Platformer",
     "type": "rerelease",
     "rating": 4.32,
@@ -102,7 +106,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/03fijJ2GEzZ92Zl5fuTxI7?si=9245dd9e597e4a94",
     "youtubeLink": "https://www.youtube.com/watch?v=NTa6Xbzfq1U&list=RDNTa6Xbzfq1U&start_radio=1",
-    "spotifyArtwork": "/images/ground-theme.png"
+    "spotifyArtwork": "/images/ground-theme.png",
+    "gameRelease": 1985
   },
   {
     "rank": 6,
@@ -112,7 +117,7 @@
     "spotify": 61,
     "youtube": 12150258,
     "ranking": 73,
-    "release": 2016,
+    "spotifyRelease": 2016,
     "genres": "Action, Shooter",
     "type": "original",
     "rating": 4.38,
@@ -123,7 +128,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/2UKgx2oba7CltHLACr3xdT?si=61c0ad9216a74bf4",
     "youtubeLink": "https://www.youtube.com/watch?v=HsLOxbLZMy8&list=RDHsLOxbLZMy8&start_radio=1",
-    "spotifyArtwork": "/images/at-doom-s-gate.jpg"
+    "spotifyArtwork": "/images/at-doom-s-gate.jpg",
+    "gameRelease": 2016
   },
   {
     "rank": 7,
@@ -133,7 +139,7 @@
     "spotify": 60,
     "youtube": 10109170,
     "ranking": 72,
-    "release": 2022,
+    "spotifyRelease": 2022,
     "genres": "Action, Indie",
     "type": "original",
     "rating": 4.4,
@@ -144,7 +150,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/6BWwOL0DEK1aLaDjyipjZj?si=10926ad81b0f4499",
     "youtubeLink": "https://www.youtube.com/watch?v=L5q4uYj-gyg&list=RDL5q4uYj-gyg&start_radio=1",
-    "spotifyArtwork": "/images/tenebre-rosso-sangue.png"
+    "spotifyArtwork": "/images/tenebre-rosso-sangue.png",
+    "gameRelease": 2020
   },
   {
     "rank": 8,
@@ -154,7 +161,7 @@
     "spotify": 46,
     "youtube": 19323240,
     "ranking": 71,
-    "release": 2015,
+    "spotifyRelease": 2015,
     "genres": "Puzzle",
     "type": "rerelease",
     "rating": 4.37,
@@ -165,7 +172,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/0QdNo0hthGtMENckZTiHe4?si=1102929c3d284104",
     "youtubeLink": "https://www.youtube.com/watch?v=NmCCQxVBfyM&list=RDNmCCQxVBfyM&start_radio=1",
-    "spotifyArtwork": "/images/tetris-theme.png"
+    "spotifyArtwork": "/images/tetris-theme.png",
+    "gameRelease": 1984
   },
   {
     "rank": 9,
@@ -175,7 +183,7 @@
     "spotify": 49,
     "youtube": 2222576,
     "ranking": 69,
-    "release": 2007,
+    "spotifyRelease": 2007,
     "genres": "Action, Adventure, RPG",
     "type": "rerelease",
     "rating": 4.38,
@@ -186,7 +194,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/7GBP9vqKB9o9wcQrkblICD?si=9ed236d7ec4b4be9",
     "youtubeLink": "https://www.youtube.com/watch?v=mYdf0yqK_Fc&list=RDmYdf0yqK_Fc&start_radio=1",
-    "spotifyArtwork": "/images/one-winged-angel.jpg"
+    "spotifyArtwork": "/images/one-winged-angel.jpg",
+    "gameRelease": 1997
   },
   {
     "rank": 10,
@@ -196,7 +205,7 @@
     "spotify": 54,
     "youtube": 21031250,
     "ranking": 69,
-    "release": 2018,
+    "spotifyRelease": 2018,
     "genres": "Action",
     "type": "original",
     "rating": 4.55,
@@ -207,7 +216,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/6ZMwwuUOx8kefl32gWOjtY?si=37c6f183b8f24a54",
     "youtubeLink": "https://www.youtube.com/watch?v=y9hh91-2iaA&list=RDy9hh91-2iaA&start_radio=1",
-    "spotifyArtwork": "/images/god-of-war.jpg"
+    "spotifyArtwork": "/images/god-of-war.jpg",
+    "gameRelease": 2018
   },
   {
     "rank": 11,
@@ -217,7 +227,7 @@
     "spotify": 57,
     "youtube": 5241918,
     "ranking": 68,
-    "release": 2022,
+    "spotifyRelease": 2022,
     "genres": "Action, Indie",
     "type": "original",
     "rating": 4.4,
@@ -228,7 +238,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/3TcArgDnTVihS8I1FHF0ns?si=8fc85e7d1e644eef",
     "youtubeLink": "https://www.youtube.com/watch?v=m5ra-w1xct8&list=RDm5ra-w1xct8&start_radio=1",
-    "spotifyArtwork": "/images/tenebre-rosso-sangue.png"
+    "spotifyArtwork": "/images/tenebre-rosso-sangue.png",
+    "gameRelease": 2020
   },
   {
     "rank": 12,
@@ -238,7 +249,7 @@
     "spotify": 44,
     "youtube": 5315155,
     "ranking": 67,
-    "release": 2021,
+    "spotifyRelease": 2021,
     "genres": "Action, Adventure, RPG",
     "type": "cover",
     "rating": 4.49,
@@ -249,7 +260,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/2jlwHvLoQlP3iSX4639fET?si=e212c51ed6a241a8",
     "youtubeLink": "https://www.youtube.com/watch?v=cPWBG6_jn4Y&list=RDcPWBG6_jn4Y&start_radio=1",
-    "spotifyArtwork": "/images/breath-of-the-wild.jpg"
+    "spotifyArtwork": "/images/breath-of-the-wild.jpg",
+    "gameRelease": 2017
   },
   {
     "rank": 13,
@@ -259,7 +271,7 @@
     "spotify": 43,
     "youtube": 5905213,
     "ranking": 66,
-    "release": 2024,
+    "spotifyRelease": 2024,
     "genres": "Action, Arcade",
     "type": "rerelease",
     "rating": 4.36,
@@ -270,7 +282,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/6wk75FvDzYWTirtXYvYEgH?si=8a6b38e8da15489e",
     "youtubeLink": "https://www.youtube.com/watch?v=7_QydNXI_ok&list=RD7_QydNXI_ok&start_radio=1",
-    "spotifyArtwork": "/images/katamari-damacy.jpg"
+    "spotifyArtwork": "/images/katamari-damacy.jpg",
+    "gameRelease": 2004
   },
   {
     "rank": 14,
@@ -280,7 +293,7 @@
     "spotify": 53,
     "youtube": 3349922,
     "ranking": 64,
-    "release": 2023,
+    "spotifyRelease": 2023,
     "genres": "Action, Indie",
     "type": "original",
     "rating": 4.4,
@@ -291,7 +304,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/3IMEgl1HzwT1vThzippYAi?si=1f055ab960c14964",
     "youtubeLink": "https://www.youtube.com/watch?v=KTCC053fLqs&list=RDKTCC053fLqs&start_radio=1",
-    "spotifyArtwork": "/images/tenebre-rosso-sangue.png"
+    "spotifyArtwork": "/images/tenebre-rosso-sangue.png",
+    "gameRelease": 2020
   },
   {
     "rank": 15,
@@ -301,7 +315,7 @@
     "spotify": 38,
     "youtube": 4403164,
     "ranking": 61,
-    "release": 2015,
+    "spotifyRelease": 2015,
     "genres": "Platformer",
     "type": "rerelease",
     "rating": 4.39,
@@ -312,7 +326,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/0kclPJGVoSNDjSMVtThbEX?si=c6b037a940bd42e0",
     "youtubeLink": "https://www.youtube.com/watch?v=Xqf8jID9TsE&list=RDXqf8jID9TsE&start_radio=1",
-    "spotifyArtwork": "/images/donkey-kong-country.png"
+    "spotifyArtwork": "/images/donkey-kong-country.png",
+    "gameRelease": 1994
   },
   {
     "rank": 16,
@@ -322,7 +337,7 @@
     "spotify": 36,
     "youtube": 5667210,
     "ranking": 60,
-    "release": 2013,
+    "spotifyRelease": 2013,
     "genres": "Arcade, Fighting",
     "type": "rerelease",
     "rating": 4.27,
@@ -333,7 +348,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/0i7dv9RsIpEJLYhdrlVDPn?si=0eb951bb70f74f95",
     "youtubeLink": "https://www.youtube.com/watch?v=hO7JEqIPQv0&list=RDhO7JEqIPQv0&start_radio=1",
-    "spotifyArtwork": "/images/street-fighter-ii.jpg"
+    "spotifyArtwork": "/images/street-fighter-ii.jpg",
+    "gameRelease": 1991
   },
   {
     "rank": 17,
@@ -343,7 +359,7 @@
     "spotify": 51,
     "youtube": 971069,
     "ranking": 60,
-    "release": 2015,
+    "spotifyRelease": 2015,
     "genres": "Adventure, Platformer",
     "type": "original",
     "rating": 4.38,
@@ -354,7 +370,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/1AvDDjLuwwC63X1xlRReCD?si=2432582f251f4220",
     "youtubeLink": "https://www.youtube.com/watch?v=U-tWqEod9Ig&list=RDU-tWqEod9Ig&start_radio=1",
-    "spotifyArtwork": "/images/ori-blind-forest.jpg"
+    "spotifyArtwork": "/images/ori-blind-forest.jpg",
+    "gameRelease": 2015
   },
   {
     "rank": 18,
@@ -364,7 +381,7 @@
     "spotify": 39,
     "youtube": 1336093,
     "ranking": 60,
-    "release": 2010,
+    "spotifyRelease": 2010,
     "genres": "RPG",
     "type": "rerelease",
     "rating": 3.74,
@@ -375,7 +392,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/5xPAEIfCjg7OWGDSClQhzu?si=667ed1ba1b274b0a",
     "youtubeLink": "https://www.youtube.com/watch?v=b3SuYFYPe4Y&list=RDb3SuYFYPe4Y&start_radio=1",
-    "spotifyArtwork": "/images/final-fantasy.jpg"
+    "spotifyArtwork": "/images/final-fantasy.jpg",
+    "gameRelease": 1987
   },
   {
     "rank": 19,
@@ -385,7 +403,7 @@
     "spotify": 48,
     "youtube": 2685521,
     "ranking": 60,
-    "release": 2018,
+    "spotifyRelease": 2018,
     "genres": "RPG, Indie",
     "type": "original",
     "rating": 4.35,
@@ -396,7 +414,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/683obppCdkqafnmakQQvJX?si=395e05d3ba944045",
     "youtubeLink": "https://www.youtube.com/watch?v=aeM0EVs1ON8&list=RDaeM0EVs1ON8&start_radio=1",
-    "spotifyArtwork": "/images/undertale.png"
+    "spotifyArtwork": "/images/undertale.png",
+    "gameRelease": 2015
   },
   {
     "rank": 20,
@@ -406,7 +425,7 @@
     "spotify": 44,
     "youtube": 7712463,
     "ranking": 59,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Racing",
     "type": "rerelease",
     "rating": 3,
@@ -417,7 +436,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/4nk1Kpx3pZxtzzgQ68LpQG?si=ba55571cfc574226",
     "youtubeLink": "https://www.youtube.com/watch?v=oY9m2sHQwLs&list=RDoY9m2sHQwLs&start_radio=1",
-    "spotifyArtwork": "/images/sonic-r.jpg"
+    "spotifyArtwork": "/images/sonic-r.jpg",
+    "gameRelease": 1997
   },
   {
     "rank": 21,
@@ -427,7 +447,7 @@
     "spotify": 46,
     "youtube": 2392259,
     "ranking": 58,
-    "release": 2018,
+    "spotifyRelease": 2018,
     "genres": "Action, Adventure, Casual, Platformer",
     "type": "original",
     "rating": 3.86,
@@ -438,7 +458,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/4X9gYGbEFLqiV4BwA8LGaB?si=c683cd37c164433e",
     "youtubeLink": "https://www.youtube.com/watch?v=6WVFIUxmCs8&list=RD6WVFIUxmCs8&start_radio=1",
-    "spotifyArtwork": "/images/sonic-mania.jpg"
+    "spotifyArtwork": "/images/sonic-mania.jpg",
+    "gameRelease": 2017
   },
   {
     "rank": 22,
@@ -448,7 +469,7 @@
     "spotify": 44,
     "youtube": 4659847,
     "ranking": 58,
-    "release": 2011,
+    "spotifyRelease": 2011,
     "genres": "Action, Shooter",
     "type": "cover",
     "rating": 4.03,
@@ -459,7 +480,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/53Lp7OESwvZmD9D4b4fMG6?si=bc9960d162264a88",
     "youtubeLink": "https://www.youtube.com/watch?v=kgcq_ZtqbO0&list=RDkgcq_ZtqbO0&start_radio=1",
-    "spotifyArtwork": "/images/uncharted.jpg"
+    "spotifyArtwork": "/images/uncharted.jpg",
+    "gameRelease": 2007
   },
   {
     "rank": 23,
@@ -469,7 +491,7 @@
     "spotify": 42,
     "youtube": 10079941,
     "ranking": 57,
-    "release": 2011,
+    "spotifyRelease": 2011,
     "genres": "Action, Shooter",
     "type": "cover",
     "rating": 4.34,
@@ -480,7 +502,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/2Ft993NAjpq9v3ljhHrJtf?si=d8954dd351eb401b",
     "youtubeLink": "https://www.youtube.com/watch?v=QiPon8lr48U&list=RDQiPon8lr48U&start_radio=1",
-    "spotifyArtwork": "/images/metal-gear-solid-2.jpg"
+    "spotifyArtwork": "/images/metal-gear-solid-2.jpg",
+    "gameRelease": null
   },
   {
     "rank": 24,
@@ -490,7 +513,7 @@
     "spotify": 43,
     "youtube": 6293879,
     "ranking": 57,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Racing",
     "type": "cover",
     "rating": 4.3,
@@ -501,7 +524,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/1SOTqkhpIWoLX1AS9Y2RpU?si=a2f4a05319644a67",
     "youtubeLink": "https://www.youtube.com/watch?v=cscuCIzItZQ&list=RDcscuCIzItZQ&start_radio=1",
-    "spotifyArtwork": "/images/mario-kart-wii.png"
+    "spotifyArtwork": "/images/mario-kart-wii.png",
+    "gameRelease": 2008
   },
   {
     "rank": 25,
@@ -511,7 +535,7 @@
     "spotify": 40,
     "youtube": 12938845,
     "ranking": 56,
-    "release": 2019,
+    "spotifyRelease": 2019,
     "genres": "",
     "type": "rerelease",
     "rating": 0,
@@ -522,7 +546,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/60KXVSMBnRC1r3Bgxq1lfD?si=3a40e49bf45646da",
     "youtubeLink": "https://www.youtube.com/watch?v=KF32DRg9opA&list=RDKF32DRg9opA&start_radio=1",
-    "spotifyArtwork": "/images/ducktales.png"
+    "spotifyArtwork": "/images/ducktales.png",
+    "gameRelease": 1989
   },
   {
     "rank": 26,
@@ -532,7 +557,7 @@
     "spotify": 42,
     "youtube": 3102435,
     "ranking": 55,
-    "release": 2012,
+    "spotifyRelease": 2012,
     "genres": "Action, RPG",
     "type": "cover",
     "rating": 4.42,
@@ -543,7 +568,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/78NOjcwjSb7qSrPtKUAHiy?si=6fdf256905d04fdd",
     "youtubeLink": "https://www.youtube.com/watch?v=pPWVfCtnGyg&list=RDpPWVfCtnGyg&start_radio=1",
-    "spotifyArtwork": "/images/skyrim.png"
+    "spotifyArtwork": "/images/skyrim.png",
+    "gameRelease": 2011
   },
   {
     "rank": 27,
@@ -553,7 +579,7 @@
     "spotify": 42,
     "youtube": 1856793,
     "ranking": 54,
-    "release": 2018,
+    "spotifyRelease": 2018,
     "genres": "Action",
     "type": "cover",
     "rating": 4.34,
@@ -564,7 +590,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/38TJi4N4oWbLgF6tqJUMW8?si=37e8dc80d18e4deb",
     "youtubeLink": "https://www.youtube.com/watch?v=SXGGvsHq6iA&list=RDSXGGvsHq6iA&start_radio=1",
-    "spotifyArtwork": "/images/wind-waker.jpg"
+    "spotifyArtwork": "/images/wind-waker.jpg",
+    "gameRelease": 2002
   },
   {
     "rank": 28,
@@ -574,7 +601,7 @@
     "spotify": 41,
     "youtube": 2372832,
     "ranking": 54,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Action, Platformer",
     "type": "cover",
     "rating": 4.37,
@@ -585,7 +612,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/1K69MiM28vAf5NOAOMtyBM?si=3738fecc726b4c53",
     "youtubeLink": "https://www.youtube.com/watch?v=FPXAW-wVHp8&list=RDFPXAW-wVHp8&start_radio=1",
-    "spotifyArtwork": "/images/mario-3d-world.jpg"
+    "spotifyArtwork": "/images/mario-3d-world.jpg",
+    "gameRelease": 2013
   },
   {
     "rank": 29,
@@ -595,7 +623,7 @@
     "spotify": 29,
     "youtube": 1393585,
     "ranking": 52,
-    "release": 2010,
+    "spotifyRelease": 2010,
     "genres": "Action, Adventure, Arcade, Casual, Indie, Puzzle, Platformer",
     "type": "original",
     "rating": 3.77,
@@ -606,7 +634,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/347sa3obuELSt8m1cCKikd?si=f715afdf637f414b",
     "youtubeLink": "https://www.youtube.com/watch?v=25m3Gk7mRQM&list=RD25m3Gk7mRQM&start_radio=1",
-    "spotifyArtwork": "/images/vvvvvv.png"
+    "spotifyArtwork": "/images/vvvvvv.png",
+    "gameRelease": 2010
   },
   {
     "rank": 30,
@@ -616,7 +645,7 @@
     "spotify": 32,
     "youtube": 405295,
     "ranking": 52,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Adventure, Indie",
     "type": "original",
     "rating": 3.98,
@@ -627,7 +656,8 @@
     "source": "curated",
     "spotifyLink": "https://open.spotify.com/track/6tRM9SEr1wnHg0tPffcO2l?si=dab8a7028ab148ba",
     "youtubeLink": "https://www.youtube.com/watch?v=AMICaeE2zb8&list=RDAMICaeE2zb8&start_radio=1",
-    "spotifyArtwork": "/images/kentucky-route-zero.png"
+    "spotifyArtwork": "/images/kentucky-route-zero.png",
+    "gameRelease": 2013
   },
   {
     "rank": 31,
@@ -637,7 +667,7 @@
     "spotify": 36,
     "youtube": 6342571,
     "ranking": 52,
-    "release": 2024,
+    "spotifyRelease": 2024,
     "genres": "Action, Adventure, RPG",
     "type": "remix",
     "rating": 4.38,
@@ -648,7 +678,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/1xyXiButXu4Ey72P07L04W?si=86a235292056409e",
     "youtubeLink": "https://www.youtube.com/watch?v=ecnb7qOl4Pc&list=RDecnb7qOl4Pc&start_radio=1",
-    "spotifyArtwork": "/images/ocarina-of-time.jpg"
+    "spotifyArtwork": "/images/ocarina-of-time.jpg",
+    "gameRelease": 1998
   },
   {
     "rank": 32,
@@ -658,7 +689,7 @@
     "spotify": 36,
     "youtube": 5761389,
     "ranking": 51,
-    "release": 1995,
+    "spotifyRelease": 1995,
     "genres": "Platformer",
     "type": "cover",
     "rating": 4.37,
@@ -669,7 +700,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0U24cFtczi6Ql2a7WGYA1z?si=f2fb8f9ccf90423d",
     "youtubeLink": "https://www.youtube.com/watch?v=lndBgOrTWxo&list=RDlndBgOrTWxo&start_radio=1",
-    "spotifyArtwork": "/images/donkey-kong-country-2.jpg"
+    "spotifyArtwork": "/images/donkey-kong-country-2.jpg",
+    "gameRelease": 1995
   },
   {
     "rank": 33,
@@ -679,7 +711,7 @@
     "spotify": 36,
     "youtube": 3745432,
     "ranking": 51,
-    "release": 2007,
+    "spotifyRelease": 2007,
     "genres": "Shooter",
     "type": "original",
     "rating": 4.36,
@@ -690,7 +722,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0Yq0llTSeE5XV5UkiiPesc?si=93bf849b727043da",
     "youtubeLink": "https://www.youtube.com/watch?v=P2NVJSJVGVQ&list=RDP2NVJSJVGVQ&start_radio=1",
-    "spotifyArtwork": "/images/halo-3.jpg"
+    "spotifyArtwork": "/images/halo-3.jpg",
+    "gameRelease": 2007
   },
   {
     "rank": 34,
@@ -700,7 +733,7 @@
     "spotify": 42,
     "youtube": 241238,
     "ranking": 50,
-    "release": 2011,
+    "spotifyRelease": 2011,
     "genres": "Action, Adventure, RPG",
     "type": "cover",
     "rating": 4.07,
@@ -711,7 +744,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/5VuHhNAOSsCxF6ltddkEUm?si=7ddb9779261746fd",
     "youtubeLink": "https://www.youtube.com/watch?v=6ZwU2l2-Z9g&list=RD6ZwU2l2-Z9g&start_radio=1",
-    "spotifyArtwork": "/images/legend-of-zelda.png"
+    "spotifyArtwork": "/images/legend-of-zelda.png",
+    "gameRelease": 1986
   },
   {
     "rank": 35,
@@ -721,7 +755,7 @@
     "spotify": 37,
     "youtube": 1410097,
     "ranking": 49,
-    "release": 2011,
+    "spotifyRelease": 2011,
     "genres": "Action, Shooter",
     "type": "cover",
     "rating": 4.2,
@@ -732,7 +766,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/3a4Gq1JxiYz0j3kEwYS4t7?si=0dc1dd07e5c640d6",
     "youtubeLink": "https://www.youtube.com/watch?v=p1yqxbDs3iE&list=RDp1yqxbDs3iE&start_radio=1",
-    "spotifyArtwork": "/images/battlefield-2.jpg"
+    "spotifyArtwork": "/images/battlefield-2.jpg",
+    "gameRelease": 2005
   },
   {
     "rank": 36,
@@ -742,7 +777,7 @@
     "spotify": 34,
     "youtube": 3736049,
     "ranking": 49,
-    "release": 2022,
+    "spotifyRelease": 2022,
     "genres": "Platformer",
     "type": "remix",
     "rating": 4.4,
@@ -753,7 +788,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/6zPxybKaYc6VlpfwKhh6x9?si=436615a20d8f4da4",
     "youtubeLink": "https://www.youtube.com/watch?v=Zqa2mgjbOIM&list=RDZqa2mgjbOIM&start_radio=1",
-    "spotifyArtwork": "/images/mario-64.png"
+    "spotifyArtwork": "/images/mario-64.png",
+    "gameRelease": 1996
   },
   {
     "rank": 37,
@@ -763,7 +799,7 @@
     "spotify": 36,
     "youtube": 1099007,
     "ranking": 48,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Action, Platformer",
     "type": "cover",
     "rating": 4.37,
@@ -774,7 +810,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/1cKHzUkIcr9OTXdeX51RK0?si=419cd50a908e4fb2",
     "youtubeLink": "https://www.youtube.com/watch?v=F1X3MP4J8_A&list=RDF1X3MP4J8_A&start_radio=1",
-    "spotifyArtwork": "/images/mario-3d-world.jpg"
+    "spotifyArtwork": "/images/mario-3d-world.jpg",
+    "gameRelease": 2013
   },
   {
     "rank": 38,
@@ -784,7 +821,7 @@
     "spotify": 35,
     "youtube": 1212860,
     "ranking": 47,
-    "release": 2017,
+    "spotifyRelease": 2017,
     "genres": "Action, Adventure, Platformer",
     "type": "cover",
     "rating": 4.3,
@@ -795,7 +832,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0JlhL50QHI2CtcGvwMykB9?si=c8d5d5c9b8b34369",
     "youtubeLink": "https://www.youtube.com/watch?v=KYdRWC6MCgM&list=RDKYdRWC6MCgM&start_radio=1",
-    "spotifyArtwork": "/images/mario-sunshine.png"
+    "spotifyArtwork": "/images/mario-sunshine.png",
+    "gameRelease": 2002
   },
   {
     "rank": 39,
@@ -805,7 +843,7 @@
     "spotify": 34,
     "youtube": 1352265,
     "ranking": 47,
-    "release": 2025,
+    "spotifyRelease": 2025,
     "genres": "Platformer",
     "type": "remix",
     "rating": 4.4,
@@ -816,7 +854,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/6z2b1lwr8XU47JvNrhjOJk?si=98d81e88286f48e1",
     "youtubeLink": "https://www.youtube.com/watch?v=hrJNgLGbYg0&list=RDhrJNgLGbYg0&start_radio=1",
-    "spotifyArtwork": "/images/mario-64.png"
+    "spotifyArtwork": "/images/mario-64.png",
+    "gameRelease": 1996
   },
   {
     "rank": 40,
@@ -826,7 +865,7 @@
     "spotify": 43,
     "youtube": 19243,
     "ranking": 46,
-    "release": 2015,
+    "spotifyRelease": 2015,
     "genres": "Simulation, Casual",
     "type": "cover",
     "rating": 3.88,
@@ -837,7 +876,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/3L2cZCDZEWXXbFfCc4pzEa?si=9006c8fe5b184107",
     "youtubeLink": "https://www.youtube.com/watch?v=GV3HPY2ZD4Q&list=RDGV3HPY2ZD4Q&start_radio=1",
-    "spotifyArtwork": "/images/tomodachi-life.jpg"
+    "spotifyArtwork": "/images/tomodachi-life.jpg",
+    "gameRelease": 2013
   },
   {
     "rank": 41,
@@ -847,7 +887,7 @@
     "spotify": 34,
     "youtube": 663764,
     "ranking": 45,
-    "release": 2021,
+    "spotifyRelease": 2021,
     "genres": "Platformer",
     "type": "cover",
     "rating": 4.37,
@@ -858,7 +898,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0LJWdrwqUGe9evztKe7HBT?si=f6e07b3e372d4dd2",
     "youtubeLink": "https://www.youtube.com/watch?v=flAFuldeRV8&list=RDflAFuldeRV8&start_radio=1",
-    "spotifyArtwork": "/images/donkey-kong-country-2.jpg"
+    "spotifyArtwork": "/images/donkey-kong-country-2.jpg",
+    "gameRelease": 1995
   },
   {
     "rank": 42,
@@ -868,7 +909,7 @@
     "spotify": 40,
     "youtube": 46321,
     "ranking": 45,
-    "release": 2019,
+    "spotifyRelease": 2019,
     "genres": "RPG, Indie",
     "type": "remix",
     "rating": 4.35,
@@ -879,7 +920,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0KOTTyxXZ2fqy6RBLkWfl1?si=24fff22c5c3240ea",
     "youtubeLink": "https://www.youtube.com/watch?v=WqzuHY3QN34&list=RDWqzuHY3QN34&start_radio=1",
-    "spotifyArtwork": "/images/undertale.png"
+    "spotifyArtwork": "/images/undertale.png",
+    "gameRelease": 2015
   },
   {
     "rank": 43,
@@ -889,7 +931,7 @@
     "spotify": 34,
     "youtube": 413300,
     "ranking": 44,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "",
     "type": "cover",
     "rating": 3.5,
@@ -900,7 +942,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0Q9JTuNLNrDaGtSTfZaqOe?si=0f3ca852700f4ad0",
     "youtubeLink": "https://www.youtube.com/watch?v=As-V14W8H2E&list=RDAs-V14W8H2E&start_radio=1",
-    "spotifyArtwork": "/images/mario-paint.jpg"
+    "spotifyArtwork": "/images/mario-paint.jpg",
+    "gameRelease": 1992
   },
   {
     "rank": 44,
@@ -910,7 +953,7 @@
     "spotify": 37,
     "youtube": 121930,
     "ranking": 44,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Racing",
     "type": "cover",
     "rating": 4.27,
@@ -921,7 +964,8 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/0eHfOSoMNlkfSbjW2JJCwA?si=07e167b5cacb4b33",
     "youtubeLink": "https://www.youtube.com/watch?v=lsIJMVg4c1w&list=RDlsIJMVg4c1w&start_radio=1",
-    "spotifyArtwork": "/images/mario-kart-ds.jpg"
+    "spotifyArtwork": "/images/mario-kart-ds.jpg",
+    "gameRelease": 2005
   },
   {
     "rank": 45,
@@ -931,7 +975,7 @@
     "spotify": 35,
     "youtube": 159054,
     "ranking": 43,
-    "release": 2020,
+    "spotifyRelease": 2020,
     "genres": "Arcade, Platformer",
     "type": "cover",
     "rating": 4.36,
@@ -942,6 +986,7 @@
     "source": "spotify",
     "spotifyLink": "https://open.spotify.com/track/5OCMNH41AwJKPOJ6K9wDOM?si=468311047f2742dc",
     "youtubeLink": "https://www.youtube.com/watch?v=AyDMWuM183Q&list=RDAyDMWuM183Q&start_radio=1",
-    "spotifyArtwork": "/images/mario-world.png"
+    "spotifyArtwork": "/images/mario-world.png",
+    "gameRelease": 1990
   }
 ]

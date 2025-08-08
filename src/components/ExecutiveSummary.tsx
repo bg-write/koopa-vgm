@@ -50,7 +50,7 @@ export default function ExecutiveSummary() {
             <ul className="text-gray-700 space-y-2">
               <li>• <strong>38%</strong> of tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
               <li>• <strong>24%</strong> of tracks have Spotify popularity scores above 50 (out of 100 - indicating strong current listenership)</li>
-              <li>• <strong>9%</strong> of games were released before 2010, showing modern VGM&apos;s dominance</li>
+              <li>• <strong>Only 9%</strong> of tracks have Spotify releases credited before 2010, but <strong>56%</strong> of games were originally released before 2010, showing classic VGM&apos;s lasting appeal through streaming platforms</li>
               <li>• <strong>38% covers</strong> performed well but <strong>33% originals</strong> showed slightly better engagement</li>
             </ul>
           </div>

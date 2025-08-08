@@ -108,7 +108,7 @@ const transformedData = data.map((row, index) => {
   const cleanedTrackName = cleanTrackName(originalTrackName);
   const artwork = getTrackArtwork(originalTrackName); // Use original name for artwork lookup
   
-  // Transform data to match frontend ChartTrack interface exactly
+  // Transform data to match clean frontend ChartTrack interface
   return {
     rank: index + 1,
     track: cleanedTrackName,
@@ -117,7 +117,7 @@ const transformedData = data.map((row, index) => {
     spotify: parseInt(String(row.spotify_popularity || 0)) || 0,
     youtube: row.youtube_views || '',
     ranking: parseInt(String(row.streaming_ranking || 0)) || 0,
-    release: row.spotify_release_year || row.game_release_date || '',
+    spotifyRelease: row.spotify_release_year || '',
     genres: row.game_genres || '',
     type: row.song_type || '',
     rating: parseFloat(String(row.game_rating || 0)) || 0,
@@ -128,7 +128,8 @@ const transformedData = data.map((row, index) => {
     source: row.discovery_source || '',
     spotifyLink: row.popular_spotify_link || '',
     youtubeLink: row.original_youtube_link || '',
-    spotifyArtwork: artwork || undefined
+    spotifyArtwork: artwork || undefined,
+    gameRelease: row.game_release_date || null
   };
 });
 

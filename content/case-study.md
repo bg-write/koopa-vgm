@@ -23,7 +23,7 @@
 
 ---
 
-## 🎯 **Scenario: What is "Koopa"?**
+## 🎯 **Scenario: What is "Koopa"?** {#scenario-what-the-heck-is-koopa}
 
 Hey there. My name is Brady Gerber. I'm a writer and music journalist who contributes to New York Magazine, Pitchfork, The Hollywood Reporter, and more (check out [my past work](https://bradygerber.com/)) and I'm writing a book proposal about the history and evolution of video game music (VGM). I have a software engineering background, I write about AI (I recently published a guide on using AI not terribly: [*The Elements of Artificial Intelligence*](https://bradygerber.com/the-elements-of-artificial-intelligence/)), and I just earned my [Google Data Analytics Professional Certificate](https://grow.google/certificates/data-analytics/), since I'm getting more into data analytics. I want to use my skills and new knowledge to expand my book research and understand what VGM I've deemed historically important (which you can't neatly quantify), what VGM is actually popular (which you can), and the relationship between the two.
 
@@ -137,7 +137,7 @@ Cool beans.
 
 ---
 
-## 🔄 **Process: Gone Fishin'**
+## 🔄 **Process: Gone Fishin'** {#process-the-actual-work}
 
 OK, now to actually *get* all this data.
 
@@ -302,7 +302,7 @@ def validate_data_quality(df):
 
 ---
 
-## 📈 **Analyze: A Whole Lotta Mario**
+## 📈 **Analyze: A Whole Lotta Mario** {#analyze-what-did-i-find}
 
 With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and see what insights we could uncover.
 
@@ -589,7 +589,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 ---
 
-## 📊 **Share: Paint a Picture (or a Graph)**
+## 📊 **Share: Paint a Picture (or a Graph)** {#share-the-final-chart}
 
 So yes, we discovered a lot of good stuff. Now let's make it look pretty.
 
@@ -643,7 +643,7 @@ Based on the comprehensive analysis, these additional visualizations could enhan
 
 ---
 
-## 🎯 **Act: Koopa Keeps Growing**
+## 🎯 **Act: Koopa Keeps Growing** {#act-whats-next}
 
 ### **Final Conclusion: The New VGM Canon is Real**
 

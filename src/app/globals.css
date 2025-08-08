@@ -31,6 +31,16 @@
     max-height: 70vh;
     overflow-y: auto;
   }
+  
+  /* Anchor link offset for fixed header */
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 2rem;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  a[href^="#"] {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {

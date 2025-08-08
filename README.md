@@ -1,6 +1,6 @@
 # 🐢 Koopa: A New Video Game Music Canon
 
-**A data-driven exploration of video game music's most iconic tracks, built with Next.js 14, TypeScript, and Tailwind CSS.**
+**A data-driven exploration of video game music's most beloved tracks, built with Next.js 15, TypeScript, and Tailwind CSS.**
 
 ![Koopa App Screenshot](./public/koopa-screenshot.png)
 *Interactive chart showcasing 45 ranked video game music tracks with artwork and streaming data*
@@ -16,11 +16,19 @@
 
 ## 🚀 **Latest Features**
 
+### **🔒 Security & Performance Improvements**
+- **Migrated from Excel to JSON** - Eliminated high-severity `xlsx` vulnerability
+- **Pre-processed data pipeline** - All frontend transformations applied to JSON output
+- **Enhanced data integrity** - Maintained Excel as source of truth while JSON serves frontend
+- **Improved build performance** - Faster builds with optimized data loading
+
 ### **🎨 Enhanced User Experience**
 - **Executive Summary** with data-driven insights for recruiters and stakeholders
 - **Professional case study layout** with improved typography and spacing
 - **Responsive design** optimized for all devices and screen sizes
 - **Clean, portfolio-ready presentation** suitable for hiring managers
+- **Interactive Table of Contents** with smooth scrolling navigation
+- **Back-to-top links** for convenient navigation throughout the case study
 
 ### **📊 Data-Driven Insights**
 - **Key insights dashboard** with quantitative and qualitative findings
@@ -33,21 +41,24 @@
 - **Executive summary** highlighting business value and technical approach
 - **Data-backed insights** with specific percentages and evidence
 - **Professional presentation** ready for stakeholder review
+- **Enhanced navigation** with working anchor links and smooth scrolling
 
 ### **📱 Technical Improvements**
-- **Next.js 14 optimization** with App Router and TypeScript
+- **Next.js 15 optimization** with App Router and TypeScript
 - **Tailwind CSS styling** with custom animations and responsive design
 - **Markdown content management** for easy case study updates
 - **Performance optimization** with efficient data loading and rendering
+- **Robust DOM manipulation** with MutationObserver for development resilience
 
 ---
 
 ## 🛠️ **Tech Stack**
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript for type safety
 - **Styling**: Tailwind CSS for responsive design
-- **Data Processing**: XLSX library for Excel file parsing
+- **Data Processing**: JSON-based data pipeline with Node.js conversion scripts
+- **Markdown Rendering**: Marked library with custom DOM processing
 - **Deployment**: Vercel for seamless hosting
 - **Design**: Custom animations and interactive elements
 
@@ -69,6 +80,7 @@
 - **API integration**: Successfully combined Spotify, YouTube, and RAWG APIs
 - **Data cleaning**: Sophisticated filtering removed 130+ derivative tracks
 - **Quality assurance**: Automated validation with statistical outlier detection
+- **Security improvements**: Eliminated vulnerable dependencies and migrated to secure JSON pipeline
 
 ---
 
@@ -86,14 +98,17 @@ koopa-vgm/
 │   │   ├── KoopaChart.tsx           # Main interactive chart component
 │   │   ├── Navigation.tsx           # Site navigation
 │   │   ├── ClickableTitle.tsx       # Animated title component
-│   │   ├── ScrollSection.tsx        # Scrollable content sections
-│   │   └── MarkdownContent.tsx      # Markdown rendering
+│   │   ├── ExecutiveSummary.tsx     # Executive summary component
+│   │   └── MarkdownContent.tsx      # Enhanced markdown rendering with TOC
 │   └── content/
 │       └── case-study.md            # Full case study content
 ├── public/
 │   ├── data/
-│   │   └── video_game_music_canon_CLEAN.xlsx  # Main dataset
+│   │   ├── video_game_music_canon.json      # Pre-processed JSON data
+│   │   └── video_game_music_canon_CLEAN.xlsx # Original Excel source
 │   └── images/                      # 45 game artwork images
+├── scripts/
+│   └── convert-excel-to-json.js     # Data conversion script
 ├── README.md                        # Project documentation
 └── package.json                     # Dependencies and scripts
 ```
@@ -107,18 +122,27 @@ koopa-vgm/
 - **Direct links** to Spotify and YouTube for each track
 - **Responsive design** optimized for mobile, tablet, and desktop
 - **Hover effects** and smooth animations for enhanced UX
+- **Formatted data display** with cleaned track names and YouTube view counts
+
+### **Enhanced Navigation**
+- **Working Table of Contents** with smooth scrolling to sections
+- **Back-to-top links** after each major section for easy navigation
+- **Anchor link support** with proper offset for fixed headers
+- **Development-resilient** with MutationObserver for hot reload compatibility
 
 ### **Data Quality Metrics**
 - **Real-time statistics** displayed at the top of the chart
 - **Cross-platform correlation** analysis
 - **Dataset versioning** and collection dates
 - **Transparent methodology** for data collection
+- **Pre-processed data** with all frontend transformations applied
 
 ### **Professional Presentation**
 - **Portfolio-ready design** suitable for hiring managers
 - **Clean, modern UI** with attention to detail
 - **Accessibility considerations** with proper contrast and navigation
 - **Performance optimized** with efficient data loading
+- **Security-focused** with no vulnerable dependencies
 
 ---
 
@@ -139,6 +163,12 @@ npm install
 
 # Run development server
 npm run dev
+```
+
+### **Data Processing**
+```bash
+# Convert Excel to JSON (if needed)
+node scripts/convert-excel-to-json.js
 ```
 
 ### **Build for Production**
@@ -163,6 +193,18 @@ npm start
 ---
 
 ## 🛠️ **Technical Challenges Overcome**
+
+### **Data Pipeline Modernization**
+- **Security vulnerability resolution**: Migrated from vulnerable `xlsx` library to secure JSON pipeline
+- **Data transformation automation**: Created Node.js script to apply all frontend transformations
+- **Source of truth preservation**: Maintained Excel as original source while JSON serves frontend
+- **Build performance improvement**: Eliminated client-side data processing for faster loads
+
+### **Navigation System Enhancement**
+- **Table of Contents functionality**: Implemented working anchor links with smooth scrolling
+- **Back-to-top navigation**: Added convenient return links after each major section
+- **Development resilience**: Used MutationObserver to handle hot reload DOM changes
+- **Accessibility improvements**: Proper scroll offset and keyboard navigation support
 
 ### **Data Quality & Filtering**
 - **Derivative content problem**: 175 initial tracks reduced to 45 after filtering out covers, remixes, and "lofi beats"
@@ -191,50 +233,53 @@ npm start
 - **Intuitive navigation** with clear information hierarchy
 - **Smooth animations** that enhance rather than distract
 - **Accessibility focus** with proper contrast and keyboard navigation
+- **Enhanced usability** with working TOC and back-to-top navigation
 
 ### **Visual Design**
 - **Clean, modern aesthetic** suitable for professional portfolios
 - **Consistent color scheme** with Koopa green branding
 - **Typography hierarchy** for optimal readability
 - **Interactive elements** that provide immediate feedback
+- **Professional presentation** with polished navigation elements
 
 ---
 
 ## 📈 **Performance & Optimization**
 
 ### **Loading Performance**
-- **Efficient data loading** with Excel file parsing
+- **Efficient data loading** with pre-processed JSON files
 - **Optimized images** with proper sizing and formats
 - **Minimal bundle size** with tree-shaking and code splitting
 - **Fast initial load** with static generation where possible
+- **Security improvements** with no vulnerable dependencies
 
 ### **User Experience**
 - **Smooth animations** with CSS transitions
 - **Responsive interactions** across all device sizes
 - **Error handling** with graceful fallbacks
 - **Loading states** for better perceived performance
+- **Enhanced navigation** with working anchor links and smooth scrolling
 
 ---
 
 ## 🔮 **Future Enhancements**
 
 ### **Immediate Next Steps**
-- **Table of Contents navigation** - Fix scroll links for better case study navigation
-- **Interactive Tableau integration** - Add more relevant charts and update dashboard
-- **Text content updates** - Improve case study content based on feedback
-- **Homepage chart improvements** - Continue enhancing visual appeal and interactivity
-
-### **Planned Features**
-- **Spotify playlist integration** with all 45 tracks
 - **Advanced filtering** by game, year, or genre
 - **Interactive data exploration** with drill-down capabilities
 - **Social sharing** with track-specific links
 
-### **Technical Improvements**
+### **Planned Features**
 - **Real-time data updates** from streaming APIs
 - **Advanced analytics** with trend analysis
 - **User preferences** and customization options
 - **Performance monitoring** and optimization
+
+### **Technical Improvements**
+- **Additional data sources** (Apple Music, TIDAL, Amazon Music)
+- **Predictive modeling** for new game soundtracks
+- **International market analysis** with regional preferences
+- **Seasonal trend analysis** for VGM popularity patterns
 
 ---
 
@@ -246,6 +291,7 @@ This project is designed as a portfolio piece showcasing data analysis and web d
 - **Web development best practices**
 - **User experience design**
 - **Professional presentation skills**
+- **Security-conscious development**
 
 ---
 
@@ -257,7 +303,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 **About the Developer**
 
-**Brady Gerber** - Music Journalist & Data Analyst
+**Brady Gerber** - Writer, Music Journalist & Data Analyst
 
 - **Portfolio**: [Website](https://bradygerber.com/) & [LinkedIn](https://www.linkedin.com/in/brady-gerber/)
 

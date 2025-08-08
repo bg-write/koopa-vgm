@@ -16,7 +16,7 @@ export default function ExecutiveSummary() {
           </p>
           <h3 className="text-lg font-semibold text-koopa-green mb-2">My Takeaway</h3>
           <p className="text-gray-700 italic">
-            There are at least seven specific "Superstar" tracks with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
+            There are at least seven specific &ldquo;Superstar&rdquo; tracks with 50M+ combined reach that should be on any VGM playlist, which balance historical significance with current popularity.
           </p>
         </div>
         <div>
@@ -50,7 +50,7 @@ export default function ExecutiveSummary() {
             <ul className="text-gray-700 space-y-2">
               <li>• <strong>73%</strong> of top tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
               <li>• <strong>89%</strong> of tracks have Spotify popularity scores above 50 (out of 100 - indicating strong current listenership)</li>
-              <li>• <strong>67%</strong> of games were released before 2010, showing classic VGM's lasting appeal</li>
+              <li>• <strong>67%</strong> of games were released before 2010, showing classic VGM&apos;s lasting appeal</li>
               <li>• <strong>38% covers</strong> performed well but <strong>33% originals</strong> showed slightly better engagement</li>
             </ul>
           </div>

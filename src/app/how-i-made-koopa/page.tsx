@@ -15,8 +15,7 @@ export default function HowIMadeKoopa() {
     .replace(/^# How I Made Koopa\n\n\*Using Spotify and YouTube streaming data to find a new "classic rock" of video game music\.\*\n\n\*\*By Brady Gerber\*\*\n\n---\n\n/, '')
     .replace(/^> \*\*📊 Dataset V1 \(August 2025\)\*\*\n\n## 📋 \*\*Table of Contents\*\*\n\n/, '## 📋 **Table of Contents**\n\n');
   
-  // Add a timestamp to help with refresh detection
-  const lastModified = new Date().toLocaleTimeString();
+
 
   return (
     <main className="min-h-screen bg-koopa-cream">

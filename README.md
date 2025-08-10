@@ -6,7 +6,7 @@ Koopa: a data-driven analysis of video game music (VGM) popularity using Spotify
 
 ## Key Findings
 - 42% of tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)
-- Only 9% of tracks have Spotify releases credited before 2010, but 56% of games were released before 2010, showing classic VGM's lasting appeal through streaming platforms and the issue with modern VGM context and preservation
+- Only 9% of tracks have Spotify releases credited before 2010, but 56% of games were released before 2010, showing classic VGM's lasting appeal through streaming platforms
 - 38% covers performed well but 33% originals showed slightly better engagement
 - Discovery opportunities: Modern indie games (ULTRAKILL, Undertale) show strong organic growth
 - Cyberpunk 2077 and ULTRAKILL emerged as unexpected modern hits
@@ -17,4 +17,4 @@ Next.js, TypeScript, Tailwind, Cursor, Python (data collection), Tableau
 
 ---
 
-*Koopa is a portfolio project demonstrating data analysis, API integration, and web development skills. Part of Google Data Analytics Professional Certificate coursework.*
+*Koopa is a portfolio project demonstrating data analysis. Part of Google Data Analytics Professional Certificate coursework.*

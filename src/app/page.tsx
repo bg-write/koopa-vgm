@@ -2,11 +2,11 @@
 
 "use client";
 
-import Link from 'next/link';
 import KoopaChart from '../components/KoopaChart';
 import Footer from '../components/Footer';
 
 export default function Home() {
+
   return (
     <main className="min-h-screen bg-koopa-cream">
       {/* Hero Section */}
@@ -69,9 +69,10 @@ export default function Home() {
             </div>
           </div>
           
-
-          {/* Chart Table */}
-          <KoopaChart />
+          {/* Chart Display - Simplified to just show the table */}
+          <div className="mb-6">
+            <KoopaChart />
+          </div>
           
 
           

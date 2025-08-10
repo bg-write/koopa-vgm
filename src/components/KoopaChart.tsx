@@ -123,7 +123,7 @@ export default function KoopaChart() {
       <div className="bg-gradient-to-r from-koopa-green/10 to-koopa-cream/20 px-6 py-2 border-b border-koopa-green/20">
         <div className="flex justify-between items-center text-xs text-gray-600">
           <div className="flex space-x-6">
-            <span>📊 <strong>45 tracks</strong> from 25+ video game IPs</span>
+            <span>📊 <strong>45 tracks</strong> from 25+ video game IP</span>
             <span>📈 <strong>r = 0.663</strong> cross-platform correlation</span>
             <span><strong>Streaming Score:</strong> 60% Spotify + 40% YouTube</span>
           </div>

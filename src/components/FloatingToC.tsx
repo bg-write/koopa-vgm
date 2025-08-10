@@ -16,6 +16,7 @@ export default function FloatingToC({ sections }: FloatingToCProps) {
 
 
 
+
   // Show floating ToC after scrolling down
   useEffect(() => {
     const handleScroll = () => {

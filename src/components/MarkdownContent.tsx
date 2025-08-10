@@ -18,6 +18,75 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   const processedRef = useRef(false);
   const observerRef = useRef<MutationObserver | null>(null);
   const [isHydrated, setIsHydrated] = useState(false);
+  const [prismLoaded, setPrismLoaded] = useState(false);
+
+  // Load Prism.js only on the client side
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !prismLoaded) {
+      import('prismjs').then(() => {
+        return import('prismjs');
+      }).then((Prism) => {
+        // Check if Python is now available
+        if (Prism.default.languages && Prism.default.languages.python) {
+          // Python support is already available
+        } else {
+          // Try to manually trigger Python support loading
+          try {
+            // This is a workaround to ensure Python support is loaded
+            const pythonCode = 'print("hello world")';
+            Prism.default.highlight(pythonCode, Prism.default.languages.python || Prism.default.languages.plaintext, 'python');
+            
+            // Manually register Python language support
+            if (!Prism.default.languages.python) {
+              try {
+                Prism.default.languages.python = {
+                  'comment': {
+                    pattern: /(^|[^\\])#.*/,
+                    lookbehind: true,
+                    greedy: true
+                  },
+                  'string': {
+                    pattern: /("""|''')[\s\S]*?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2/,
+                    greedy: true
+                  },
+                  'keyword': /\b(?:and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\b/,
+                  'builtin': /\b(?:__import__|abs|all|any|bin|bool|breakpoint|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip)\b/,
+                  'function': /\b[a-zA-Z_]\w*(?=\s*\()/,
+                  'number': /\b(?:0b[01]+|0o[0-8]+|0x[a-fA-F0-9]+|\d+(?:\.\d+)?(?:e[+-]?\d+)?)\b/,
+                  'operator': /[-+%=]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/
+                };
+              } catch (e) {
+                console.warn('Failed to manually register Python language:', e);
+              }
+            }
+            
+            return Prism;
+          } catch (e) {
+            console.warn('Python highlighting test failed:', e);
+            return Prism;
+          }
+        }
+        
+        return Prism;
+      }).then((Prism) => {
+        setPrismLoaded(true);
+        
+        // Apply highlighting immediately after everything is loaded
+        if (contentRef.current) {
+          Prism.default.highlightAllUnder(contentRef.current);
+          
+          // Force a re-highlight after a short delay to ensure language support is ready
+          setTimeout(() => {
+            if (contentRef.current) {
+              Prism.default.highlightAllUnder(contentRef.current);
+            }
+          }, 200);
+        }
+      }).catch((error) => {
+        console.warn('Failed to load Prism.js:', error);
+      });
+    }
+  }, [prismLoaded]);
 
     // Process headings and add back-to-top links
   const processContent = useCallback(() => {
@@ -187,7 +256,17 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
 
       if (shouldReprocess) {
         processedRef.current = false;
-        setTimeout(() => processContent(), 50);
+        setTimeout(() => {
+          processContent();
+          // Re-apply Prism.js highlighting after content changes
+          if (contentRef.current && prismLoaded) {
+            import('prismjs').then((Prism) => {
+              if (contentRef.current) {
+                Prism.default.highlightAllUnder(contentRef.current);
+              }
+            });
+          }
+        }, 50);
       }
     });
 
@@ -276,6 +355,15 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           setTimeout(() => {
             placeholder.innerHTML = '';
             placeholder.appendChild(tableauViz);
+            
+            // Re-apply Prism.js highlighting after content changes
+            if (contentRef.current && prismLoaded) {
+              import('prismjs').then((Prism) => {
+                if (contentRef.current) {
+                  Prism.default.highlightAllUnder(contentRef.current);
+                }
+              });
+            }
           }, 500); // Small delay to show loading state
         }
       });
@@ -332,12 +420,51 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     // Use a small delay to ensure DOM is ready
     const timer = setTimeout(() => {
       processContent();
+      
+      // Apply Prism.js syntax highlighting to all code blocks
+      if (contentRef.current && prismLoaded) {
+        // Use dynamic import to access Prism
+        import('prismjs').then((Prism) => {
+          if (contentRef.current) {
+            Prism.default.highlightAllUnder(contentRef.current);
+          }
+        });
+      }
     }, 100);
+
+    // Add a fallback timer to ensure highlighting is applied even if there are timing issues
+    const fallbackTimer = setTimeout(() => {
+      if (contentRef.current && prismLoaded) {
+        import('prismjs').then((Prism) => {
+          if (contentRef.current) {
+            Prism.default.highlightAllUnder(contentRef.current);
+          }
+        });
+      }
+    }, 500);
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(fallbackTimer);
     };
-  }, [content, processContent, isHydrated]);
+  }, [content, processContent, isHydrated, prismLoaded]);
+
+  // Apply highlighting whenever Prism.js becomes available
+  useEffect(() => {
+    if (prismLoaded && contentRef.current) {
+      // Check what classes are on the code blocks
+      const codeBlocks = contentRef.current.querySelectorAll('pre');
+      codeBlocks.forEach((block, index) => {
+        // Check if highlighting actually worked
+        setTimeout(() => {
+          const highlightedBlocks = contentRef.current?.querySelectorAll('pre .token');
+          if (highlightedBlocks && highlightedBlocks.length > 0) {
+            // Highlighting is working
+          }
+        }, 100);
+      });
+    }
+  }, [prismLoaded]);
 
   // Process tableau blocks and {#id} syntax before markdown processing
   const processedContent = content.replace(
@@ -363,8 +490,6 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
       </div>`;
     }
   );
-
-
 
   // Render the markdown content
   const htmlContent = marked(processedContent) as string;

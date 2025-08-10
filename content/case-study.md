@@ -6,32 +6,32 @@
 
 ---
 
-> **📊 Dataset V1 (August 2025)**
+📊 Dataset V1: August 2025
 
 ## 📋 **Table of Contents** {#table-of-contents}
 
-- [🎯 What is "Koopa"?](#scenario-what-the-heck-is-koopa)
-- [🎵 The Business Problem](#ask-lets-make-a-playlist)
-- [📊 Data Collection & Methodology](#prepare-o-data-where-art-thou)
-- [🔄 Process & Analysis](#process-the-actual-work)
-- [📈 Key Findings & Insights](#analyze-what-did-i-find)
-- [📊 Final Results](#share-the-final-chart)
-- [🎯 Next Steps & Recommendations](#act-whats-next)
+- [🐢 Scenario: What is "Koopa"?](#scenario-what-the-heck-is-koopa)
+- [🎵 Ask: Let's Make a Playlist](#ask-lets-make-a-playlist)
+- [📊 Prepare: O Data, Where Art Thou?](#prepare-o-data-where-art-thou)
+- [🔄 Process: Gone Fishin'](#process-the-actual-work)
+- [📈 Analyze: A Whole Lotta Mario](#analyze-what-did-i-find)
+- [📊 Share: Paint a Picture (or a Graph)](#share-the-final-chart)
+- [🎯 Act: Koopa Keeps Growing](#act-whats-next)
 - [📚 Lessons Learned](#lessons-learned)
 
 > **Quick Navigation:** If you want to skip to the good stuff, check out the [final results](/).
 
 ---
 
-## 🎯 **Scenario: What is "Koopa"?** {#scenario-what-the-heck-is-koopa}
+## 🐢 **Scenario: What is "Koopa"?** {#scenario-what-the-heck-is-koopa}
 
-Hey there. My name is Brady Gerber. I'm a writer and music journalist who contributes to New York Magazine, Pitchfork, The Hollywood Reporter, and more (check out [my past work](https://bradygerber.com/)) and I'm writing a book proposal about the history and evolution of video game music (VGM).
+Hey there. My name is Brady Gerber. I'm a writer and music journalist who contributes to New York Magazine, Pitchfork, The Hollywood Reporter, and more (check out [my past work](https://bradygerber.com/)). I'm writing a book proposal about the history and evolution of video game music (VGM).
 
-I also have a software engineering background, I write about AI (I recently published a guide on using AI not terribly: [*The Elements of Artificial Intelligence*](https://bradygerber.com/the-elements-of-artificial-intelligence/)), and I just earned my [Google Data Analytics Professional Certificate](https://grow.google/certificates/data-analytics/), since I'm getting more into data analytics.
+I also have a software engineering background, I write about AI (I recently published a guide on how to use AI not terribly called [*The Elements of Artificial Intelligence*](https://bradygerber.com/the-elements-of-artificial-intelligence/)), and I just earned my [Google Data Analytics Professional Certificate](https://grow.google/certificates/data-analytics/), since I'm getting more into data analytics.
 
-I want to use my skills and new knowledge to expand my book research and understand what VGM I've deemed historically important (which you can't neatly quantify), what VGM is actually popular (which you can), and the relationship between the two.
+I now want to use my skills and new knowledge to expand my book research and better understand what VGM I've deemed historically important (which you can't neatly quantify), what VGM is actually popular (which you can), and the relationship between the two.
 
-**The question:** Can I use public music streaming data to help me create and expand a "new" list of the most beloved VGM of all time, and would I be shocked by the results?
+**The question:** Can I use public music streaming data to create and expand a "new" list of the most beloved VGM of all time, and would I be shocked by the results?
 
 I'm organizing the results like my own Billboard Hot 100 chart. I'm calling it "Koopa."
 
@@ -41,7 +41,7 @@ Yes, [*that* Koopa](https://en.wikipedia.org/wiki/Koopa_Troopa).
 
 ## 🎵 **Ask: Let's Make a Playlist** {#ask-lets-make-a-playlist}
 
-To make life easier and impose some structure, I decided to act like a consultant for a music streaming company.
+To make my life easier and impose some structure, I decided to act like a data consultant for a music streaming company.
 
 ### **The Problem**
 This streaming company has no playlists or editorial context to talk about the vast and diverse VGM scattered across their platform, even if they understand and appreciate how massive the video game industry is and its growing intersection with the music industry. They're also underwhelmed by their competition's VGM playlists that focus more on very recent hits along with covers and user remixes of classic VGM. These playlists get the job done, but they feel random and incomplete.
@@ -50,7 +50,7 @@ This streaming company has no playlists or editorial context to talk about the v
 Curate a 40-track playlist summing up the greatest hits of VGM across the history of video games, using data to justify my picks and include tracks with high user engagement.
 
 ### **The Parameters**
-- **Data Sources:** I can use whatever public data I want, whether it's an already-established dataset or working with APIs to create and clean up my own dataset
+- **Data Sources:** I can use whatever public data I want, whether it's an already-established dataset via Kaggle or working with APIs to create and clean up my own data
 - **AI:** I'm allowed to use whatever AI tools I want, but my bosses are expecting me to clearly articulate and explain my code and thought process, including the moments when I disagreed with what the AI suggested or automatically did for me
 - **Timeline:** They're giving me a week to knock this out, knowing this experiment could be fleshed out indefinitely but wanting something to review within five business days (40 tracks felt like a fair number to start)
 
@@ -58,7 +58,7 @@ Curate a 40-track playlist summing up the greatest hits of VGM across the histor
 The company's content strategy team, product team, marketing team, and senior leadership. Also me, because all this data analysis will help me with my book proposal.
 
 ### **The Deliverable**
-This case study (hi!) along with a Tableau Public link summing up the final list of songs and interesting takeaways. Because my fake boss really likes Tableau.
+This case study (hi!) along with a Tableau link summing up some interesting takeaways. Because my fake boss really likes Tableau.
 
 OK, cool.
 
@@ -67,39 +67,41 @@ OK, cool.
 ## 📊 **Prepare: O Data, Where Art Thou?** {#prepare-o-data-where-art-thou}
 
 ### **First step: What data am I using?**
-After scanning through several public datasets, I found a few nice options regarding video games, but none that I needed regarding VGM specifically. Very sad.
+After scanning through several public datasets, I found a few nice options regarding video games, but none that I needed for VGM specifically. Very sad.
 
 Good thing I already had a backup plan.
 
-> **Editor's note:** I'm sure you smart readers out there could point out some fleshed-out public VGM datasets that I missed. If you spot one and want to give it a shout, shoot me an email and I'll add it to this post, thank you.
+> **Editor's note:** I'm sure some smart readers out there could point out some fleshed-out public VGM datasets that I missed. If you spot one and want to give it a shout, shoot me an email and I'll add it to this post, thank you.
 
-I had used **Spotify**'s API on past pet projects and found it easy to work with. I also wanted an excuse to try out **YouTube**'s API, and it seemed relevant to this project; maybe I could cross-reference the VGM that does well on Spotify and YouTube and find the tracks that do well on both platforms. In my data research, I also found **RAWG**, which would come in handy for providing video game metadata and context.
+I had used **Spotify**'s web API before and found it easy to work with. I also wanted an excuse to try out **YouTube**'s API, and it seemed relevant to this project; I could cross-reference the VGM that does well on Spotify and YouTube and find the tracks that do well on both platforms. In my data research, I also found **RAWG**, which would come in handy for providing video game metadata and context.
 
-So to make this project more interesting while having more control over my data, and since I already had these APIs on top of mind, I decided to use **Python** and **Cursor** to help me get the API data I needed and keep everything organized.
+Since I already had these APIs on top of mind, I decided to use **Python** and **Cursor** to help me gather all this data I needed and keep everything organized.
 
-I have Cursor Pro, so I knew its AI could do a lot of heavy-lifting regarding creating scripts and automating (or at least speeding-up) my work. I also knew that Cursor had a bad habit of spitting out a LOT of code at once and wanting to do everything right away and then some. I had to make sure to remind and train the AI to slow down and take things step-by-step, for my own sanity but also so that we didn't get distracted by scope creep.
+I have Cursor Pro, and I knew that its AI could do a lot of heavy-lifting regarding creating scripts and automating (or at least speeding-up) my work. I also knew that Cursor had a bad habit of spitting out a LOT of code at once and wanting to do everything right away and then some. I had to make sure to train the AI to slow down and take things step-by-step, for my own sanity but also so that I didn't get distracted by scope creep.
 
 ### **My Data Sources**
-Great, so now I had my data sources:
+Great, so now I had my sources:
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api) - Spotify's official source for real-time popularity scores and audio features
 - [YouTube Data API v3](https://developers.google.com/youtube/v3/getting-started) - Google's official source for engagement metrics (e.g., video view counts)
-- [RAWG Video Game Database API](https://rawg.io/apidocs) - Well-verified, community-driven API for video game metadata (e.g., release dates, publishers, platforms)
+- [RAWG Video Game Database API](https://rawg.io/apidocs) - Well-verified, community-driven source for video game metadata (e.g., release dates, publishers, platforms)
 
-I considered adding [Apple Music](https://developer.apple.com/documentation/applemusicapi) and [TIDAL](https://developer.tidal.com/) APIs, but due to my limited time and existing comfort with Spotify's API, I decided to stick with Spotify.
+I considered adding [Apple Music](https://developer.apple.com/documentation/applemusicapi) and [TIDAL](https://developer.tidal.com/) APIs, but due to my limited time and existing comfort with Spotify's API, I decided to stick with just Spotify.
 
-(I'm an Apple Music user, ironically. Koopa V2 will incorporate Apple Music and TIDAL, so stay tuned.)
+(I'm an Apple Music user, ironically. Koopa V2 will incorporate Apple Music and TIDAL, so stay tuned!)
 
-These APIs are well-organized, credible, and verified, so I didn't anticipate any issues with licensing, privacy, security, or accessibility, as long as I was following each API's documentation. During my Google course, we were taught ROCCC (Reliable, Original, Comprehensive, Current, Cited), and yeah, by and large, we were in the clear.
+All these APIs are well-organized, credible, and verified, so I didn't anticipate any issues with licensing, privacy, security, or accessibility, as long as I was following each API's documentation. During my Google course, we were taught ROCCC (Reliable, Original, Comprehensive, Current, Cited), and yeah, by and large, I was in the clear.
 
 ### **Addressing Data Bias & Limits**
-I was mindful that even between Spotify, YouTube, RAWG, and my own research, I would not be able to capture the *entire* history and breadth of VGM. No "Greatest X of all time" list ever can. That's OK: these lists are best as conversation starters, not final verdicts. I also assumed these APIs would lean towards recent songs and not include a lot of VGM that never received an official standalone release. As helpful and convenient as streaming services are, they are horrible historians. I didn't want Koopa to be full of lo-fi Minecraft remixes and nothing else.
+I was mindful that even between Spotify, YouTube, RAWG, and my own research, I would not be able to capture the *entire* history and breadth of VGM. No "Greatest X of all time" list ever can. That's OK. These lists are best as conversation starters, not final verdicts.
+
+I also assumed these APIs would lean towards recent songs and not include a lot of VGM that never received an official standalone release. As helpful and convenient as streaming services are, they're horrible historians. I didn't want this final dataset to be full of lo-fi Minecraft remixes and nothing else.
 
 Luckily, I had a solution.
 
-### **My Curated Foundation**
-From my initial book research, I settled on 20 video game scores, soundtracks, and sound effects that would make for interesting and rich chapters. I knew that even if these 20 VGM tracks were not popular, or even available, on Spotify or YouTube, they needed to be included in Koopa in some capacity ... or at least they needed to be a part of the initial data collection.
+### **A Curated Foundation**
+From my initial book research, I settled on 20 video game scores, soundtracks, and sound effects that would make for interesting, rich chapters. I knew that even if these 20 VGM tracks were not popular or even available on Spotify or YouTube, they needed to be included in Koopa in some capacity...or at least they needed to be a part of the initial data collection.
 
-**Here are my 20 VGM picks, in order of game release:**
+**Here were my initial 20 VGM picks, in order of game release:**
 - Pong
 - Space Invaders
 - Super Mario Bros.
@@ -121,19 +123,21 @@ From my initial book research, I settled on 20 video game scores, soundtracks, a
 - Kentucky Route Zero
 - Cyberpunk 2077
 
-Obviously, my book will explore VGM beyond these 20 games (no, I have not forgotten about Pac-Man, Journey, or literally any Persona game, you sickos), but I consider these titles essentials.
+Obviously, my book will explore VGM beyond these 20 games (no, I have not forgotten about Pac-Man, Journey, or any Persona game, you sickos), but I consider these titles essential.
 
-So, in a sense, my playlist was halfway done, even if I wasn't sure yet how popular or available these titles would be on Spotify or YouTube ... I doubt the Pong sound effect would be on most people's playlists ... or what specific track from each game should be included in the final dataset, since I want to try (key word *try*) to keep the final list to one song per game.
+So, in a sense, my playlist was halfway done, even if I wasn't sure yet how popular or available these titles would be on Spotify or YouTube (I doubt the Pong sound effect would be on most Spotify users' playlists) or what specific track from each game should be included in the final dataset, since I want to try (key word *try*) to keep the final list to one song per game.
 
-However, even at this stage, I knew I would have to dump Tony Hawk's Pro Skater, Grand Theft Auto, and Guitar Hero, due to their emphasis on licensed music. So goodbye for now.
+However, even at this stage, I knew I had to dump Tony Hawk's Pro Skater, Grand Theft Auto, and Guitar Hero, due to their emphasis on licensed music. So goodbye for now.
 
-Cyberpunk 2077 blurs this line, but I kept it in due to all its original music being written *for* the game and which you can listen to in-game. Cyberpunk 2077 also has a LOT of tracks that do well on streaming, but still, I stuck to just one song for this game. This initial track selection was definitely more art than science.
+Cyberpunk 2077 blurs this line a little, but I kept it due to all its original music being written *for* the game and which you can listen to in-game. Cyberpunk 2077 also has a LOT of tracks that do well on streaming, but still, I stuck to just one song for this game.
 
-With all this talk about curation, I still knew we'd miss a lot of beloved indie games and region-specific releases that aren't widely available on streaming platforms. I have an American-white-dude-rock-critic bias and I'm interested in a classic rock VGM canon, which means that a lot of what you'd expect to be on here...will probably be here.
+It's worth saying the quiet part out-loud: This initial track selection was definitely more art than science.
+
+With all this talk about curation, I also still knew that I'd miss a lot of beloved indie games and region-specific releases that aren't widely available on streaming platforms. I have an American-white-dude-rock-critic bias and I'm interested in a classic rock-like VGM canon, which means that a lot of what you'd expect to be on here...will probably be here.
 
 Again, more art than science.
 
-Now it was time to find the second half of this playlist, this half more represented by current user activity and trends, and which could potentially be a bizarre grab-bag of tunes.
+Now it was time to find the second half of this playlist. This half would be more represented by current user activity and trends, and which could potentially be a bizarre grab-bag of tunes.
 
 Cool beans.
 
@@ -145,7 +149,7 @@ OK, now to actually *get* all this data.
 
 This is where I get to be all technical and nerdy.
 
-Below are some of the code snippet highlights. I won't show EVERY bit of code; we'd be here all day.
+Below are some of the code snippet highlights. I won't show every bit of code that I used; we'd be here all day.
 
 ### **Technical Stack & Setup**
 
@@ -193,7 +197,7 @@ def collect_game_data(game_name):
 ```
 
 **Phase 2: Discovery (Popular VGM)**
-I then searched for popular video game music to find what's actually popular, focusing on Spotify and then YouTube:
+I then searched for popular VGM to find what's actually popular, focusing on Spotify and then YouTube:
 
 ```python
 def discover_popular_vgm():
@@ -235,9 +239,9 @@ requests.get(f"https://api.rawg.io/api/games/{game_id}")           # Game detail
 
 ### **The Great Data Pivot: 175 → 45 Tracks**
 
-Things were going well, until I came across a problem.
+Things were going well, until I found a problem.
 
-After collecting 175 tracks, knowing that I would remove repeating or unrelated VGM tracks, I realized that Spotify was flooded with remixes, covers, and "lofi beats to study to" versions of popular VGM. A search for "Super Mario Bros." or "Donkey Kong Country Theme" returned hundreds of results, but maybe 5% were the original tracks I wanted, if I was lucky.
+After collecting 175 tracks, knowing that I would remove repeating or unrelated VGM tracks, I realized that Spotify was *flooded* with remixes, covers, and "lofi beats to study to" versions of popular VGM. A search for "Super Mario Bros." or "Donkey Kong Country Theme" returned hundreds of results, but maybe 5% were the original tracks I wanted, if I was lucky.
 
 I also kept getting Lana Del Rey's "Video Games" as a top VGM result.
 
@@ -246,7 +250,7 @@ Womp.
 **The Solution:** Strict filtering criteria:
 
 ```python
-# Example of our filtering approach
+# Example of some of the filtering approach
 excluded_keywords = [
     'remix', 'cover', 'lofi', 'lo-fi', 'chill', 'study', 'sleep',
     'instrumental', 'piano', 'orchestra', '8-bit', '8bit', 'retro',
@@ -255,15 +259,15 @@ excluded_keywords = [
 ```
 
 **The Impact of Filtering Choices:**
-This filtering process revealed a critical insight: **the final playlist could vary dramatically based on our keyword choices**. For example:
+This filtering process revealed a critical insight: **the final playlist could vary dramatically based on my keyword choices**. For example:
 - Including "orchestra" would eliminate many official orchestral arrangements
 - Excluding "8-bit" would remove authentic retro game music
 - Adding "theme" might have filtered out legitimate theme songs
 
 **The Data Pivot Reality Check:**
-Our initial 175 tracks shrank dramatically after filtering, highlighting how much of Spotify's VGM content consists of derivative works rather than original tracks. This filtering process wasn't just about cleaning data—it fundamentally shaped what I now had to decide between "authentic" and "close-enough" VGM versus user-generated content.
+The initial 175 tracks shrank dramatically after filtering, highlighting how much of Spotify's VGM content consists of derivative works rather than original tracks. This filtering process wasn't just about cleaning data—it fundamentally shaped what I now had to decide between "authentic" and "close-enough" VGM versus user-generated content.
 
-**Manual Verification:** To help with this new problem, I then manually verified each track, listening to samples and cross-referencing with official releases. For cases where the most popular Spotify tracks of a particular VGM were still covers, I included original YouTube videos for context (e.g., The Legend of Zelda: Breath of the Wild's main theme).
+**Manual Verification:** To help with this new problem, I manually verified each track, listening to samples and cross-referencing with official releases. For cases where the most popular Spotify tracks were still covers, I included original YouTube videos for context (e.g., The Legend of Zelda: Breath of the Wild's main theme).
 
 ### **Data Cleaning & Quality Assurance**
 
@@ -283,7 +287,7 @@ def validate_data_quality(df):
     return quality_report(missing_data, outliers)
 ```
 
-## 🔧 **Technical Challenges & Solutions: The Nitty-Gritty**
+### **Technical Challenges & Solutions: Some Nitty-Gritty**
 
 ### **API Rate Limiting & Authentication Failures**
 
@@ -305,7 +309,7 @@ def validate_data_quality(df):
 
 ### **Data Quality Metrics & Filtering Criteria**
 
-**Exact Numbers from Our Analysis:**
+**Exact Numbers from Analysis:**
 - **Initial Dataset:** 175 tracks identified through initial research
 - **After Cover/Remix Filtering:** 130 tracks removed (74% elimination rate)
 - **Final Dataset:** 45 high-quality tracks (26% retention rate)
@@ -343,11 +347,13 @@ def validate_data_quality(df):
 
 **Result:** A clean, analysis-ready dataset with 40+ authentic VGM tracks, each with comprehensive metadata from all three APIs.
 
+OK, great.
+
 ---
 
 ## 📈 **Analyze: A Whole Lotta Mario** {#analyze-what-did-i-find}
 
-With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and see what insights we could uncover.
+With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and see what insights I could uncover.
 
 ### **Dataset Overview**
 
@@ -416,9 +422,9 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 </div>
 
 **Complete Dataset Features:**
-- **45 tracks** from 25+ unique game IPs
+- **45 tracks** from 25+ unique game IP
 - **21 columns** of comprehensive metadata
-- **30-year span** (1985-2025) of gaming history
+- **40-year span** (1985-2025) of gaming history
 - **Cross-platform data** from Spotify, YouTube, and RAWG
 - **Song types:** 15 originals, 17 covers, 9 rereleases, 4 remixes
 - **Discovery sources:** 31 from Spotify discovery, 14 from curated picks
@@ -428,7 +434,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 ### **Key Business Insights & Data Patterns**
 
 **🎯 Top-Performing Franchises:**
-- **Nintendo representation:** 42% of all tracks are from Mario, Zelda, or Donkey Kong franchises
+- **Nintendo representation:** 42% of all tracks are from Mario, Zelda, and Donkey Kong franchises
 - **Modern hits emerge:** Cyberpunk 2077 (#1) and ULTRAKILL (#7, #11, #14) show strong contemporary appeal
 - **Classic VGM's lasting appeal:** Only 9% of tracks have Spotify releases credited before 2010, but 56% of games were originally released before 2010, showing classic VGM's enduring popularity through streaming platforms
 
@@ -453,7 +459,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **Core Track Data:**
 - `track_name` - The song title (e.g., "I Really Want to Stay at Your House")
-- `game_name` - The video game it's from (e.g., "Cyberpunk 2077")
+- `game_name` - The video game source (e.g., "Cyberpunk 2077")
 - `game_ip` - The broader video game IP or series (e.g., "Mario", "The Legend of Zelda")
 - `spotify_artist_name` - The performer or composer (e.g., "Rosa Walton", "Koji Kondo")
 - `song_type` - Whether it's an original, cover, rerelease, or remix
@@ -461,7 +467,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 **Streaming Performance:**
 - `spotify_popularity` - Spotify's 0-100 popularity score
 - `youtube_views` - Total YouTube view count
-- `streaming_ranking` - Our combined score (60% Spotify + 40% YouTube)
+- `streaming_ranking` - The combined score (60% Spotify + 40% YouTube)
 - `spotify_release_year` - When the track was released on Spotify
   <!-- TODO: CHECK - This is different from game_release_date. Many classic tracks have recent Spotify releases -->
 
@@ -476,7 +482,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 - `game_publishers` - Who published the game
 
 **Source Tracking:**
-- `discovery_source` - How we found it (curated vs Spotify discovery)
+- `discovery_source` - How I found it (curated vs Spotify discovery)
 - `original_youtube_link` - Link to original YouTube video
 - `popular_spotify_link` - Link to popular Spotify version
 
@@ -488,10 +494,10 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **The Cyberpunk 2077 Phenomenon:**
 - "I Really Want to Stay at Your House" achieved a perfect 100.00 streaming ranking
-- Scored 78/100 on Spotify popularity (the highest in our dataset)
+- Scored 78/100 on Spotify popularity (the highest in the dataset)
 - Racked up 61.9 million YouTube views (also the highest)
 - A 2020 game's soundtrack completely dominated the competition
-- This song's success likely benefited from its prominent use in the beloved 2022 Netflix anime spin-off "Cyberpunk: Edgerunners" (which I can confirm rules)
+- The song's success likely benefited from its prominent use in the popular 2022 Netflix anime spin-off "Cyberpunk: Edgerunners" (which I can confirm rules)
 
 **The Minecraft Confirmation:**
 - "Sweden" from Minecraft achieved 70/100 Spotify popularity with 25.8M YouTube views
@@ -510,21 +516,16 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **Correlation Analysis:**
 - Strong positive correlation **(r = 0.663)** between Spotify popularity and YouTube views
-- This correlation validates that we're measuring authentic popularity, not just platform-specific quirks
+- This correlation validates that I'm measuring authentic popularity, not just platform-specific quirks
 - Tracks that people genuinely love tend to perform well across different streaming services
 
 **Temporal Trends:**
-- **Spotify release year range:** 1995-2025 (30-year span)
-  <!-- TODO: CHECK - This refers to Spotify release years, not game release years. Need to clarify this distinction -->
-- **Peak Spotify release years:** 2020 (8 tracks), 2011 (5 tracks), 2015/2018 (4 tracks each)
-  <!-- TODO: CHECK - These are Spotify release years, not game release years -->
-- **Spotify release bias:** 18 tracks from 2020+ vs 4 tracks pre-2010
-  <!-- TODO: CHECK - This refers to Spotify releases, not game releases. Many classic games have recent Spotify releases -->
+- **Spotify track release year range:** 1995-2025 (30-year span)
+- **Peak Spotify track release years:** 2020 (8 tracks), 2011 (5 tracks), 2015/2018 (4 tracks each)
 - **Average gap:** 11.7 years between game release and Spotify release
-  <!-- TODO: CHECK - This is the key insight - the gap between when a game was released vs when its music was added to Spotify -->
 
 **Platform Performance Patterns:**
-- **PC leads:** 21 tracks (47%) - reflects modern gaming trends
+- **PC leads:** 21 tracks (47%) - reflects modern gaming trends, post-platform exclusivity
 - **Nintendo Switch:** 15 tracks (33%) - strong VGM representation
 - **PlayStation 4:** 13 tracks (29%) - AAA game dominance
 - **Best performing:** PlayStation 5 (75.04 avg ranking), Android (72.00)
@@ -536,23 +537,11 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 ### **Detailed Breakdowns**
 
-**Game IP Distribution:**
-- **Mario dominates:** 10 tracks (22% of dataset) - Intentionally tried to limit one track per game to avoid over-representation, yet Mario proved to be too popular to deny
-- **The Legend of Zelda:** 4 tracks
-- **ULTRAKILL:** 3 tracks
-- **Donkey Kong:** 3 tracks
-- **25 unique IPs** total, showing good diversity
-
 **Song Type Analysis:**
 - **Covers:** 17 tracks (38%) - mostly faithful renditions of classic themes
 - **Originals:** 15 tracks (33%) - authentic soundtrack releases
 - **Rereleases:** 9 tracks (20%) - faithful reissues
 - **Remixes:** 4 tracks (9%) - modern arrangements
-
-**Notable Release Gaps:**
-- **Cyberpunk 2077:** 3-year gap (game: 2020, Spotify: 2023 for official game soundtrack version)
-- **Classic games:** 20-30 year gaps (Super Mario Bros: 34 years)
-- **Modern games:** Often 0-3 year gaps
 
 **Developer/Publisher Insights:**
 - **Nintendo:** 19 tracks (42%) - unsurprising VGM powerhouse
@@ -583,7 +572,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 - YouTube views alone can be misleading (viral videos vs sustained listening)
 - The combined score gives us a more complete picture of a track's cultural impact
 
-**How we calculated it:**
+**How I calculated it:**
 - **60% weight to Spotify popularity** (0-100 scale) - represents current listening trends
 - **40% weight to YouTube views** (normalized so 10M views = 1.0) - represents broader cultural reach
 - **Weighted average** creates a balanced score that rewards both platforms
@@ -598,9 +587,9 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **Q: Can streaming data help create a VGM canon?**
 
-**A:** Absolutely. The data proves that streaming metrics can identify a legitimate VGM canon that balances historical significance with current popularity. Our 45-track dataset reveals clear performance tiers, from Cyberpunk 2077's perfect 100.00 ranking down to classic tracks maintaining cultural relevance.
+**A:** Absolutely. The data proves that streaming metrics can identify a legitimate VGM canon that balances historical significance with current popularity. The 45-track dataset reveals clear performance tiers, from Cyberpunk 2077's perfect 100.00 ranking down to classic tracks maintaining cultural relevance.
 
-**Importantly, this isn't just a popularity contest.** My curated picks from my book research (like The Last of Us, Katamari Damacy, and Kentucky Route Zero) competed successfully with tracks discovered purely through Spotify popularity algorithms. This validates that thoughtful curation combined with data analysis creates a more meaningful VGM canon than either approach alone.
+**Importantly, this isn't just a popularity contest.** The curated picks from my book research (including the likes of Katamari Damacy and Kentucky Route Zero) competed successfully with tracks discovered purely through Spotify popularity algorithms. This validates that thoughtful curation combined with data analysis creates a more meaningful VGM canon than either approach alone.
 
 **Q: What's the relationship between historical importance and popularity?**
 
@@ -608,7 +597,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **Q: Which tracks should make the final playlist?**
 
-**A:** Using our Tableau analysis, we defined "superstar tracks" as those with a Streaming Ranking ≥64 (combining Spotify popularity and YouTube views). The data identified 14 tracks meeting this threshold that should anchor any VGM playlist. Here are the top 7 performers by Streaming Ranking:
+**A:** Using my Tableau analysis (more on this in the next section), I defined "superstar tracks" as those with a Streaming Ranking ≥64 (combining Spotify popularity and YouTube views). The data identified 14 tracks meeting this threshold that should anchor any VGM playlist. Here are the top 7 performers by Streaming Ranking:
 1. Cyberpunk 2077 - "I Really Want to Stay at Your House" (Ranking: 100, 78 popularity, 62M views)
 2. Minecraft - "Sweden" (Ranking: 91, 70 popularity, 26M views)
 3. The Last of Us - "The Last of Us" (Ranking: 82, 63 popularity, 4.7M views)
@@ -623,7 +612,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **A:** This analysis provides exactly what they need:
 - **Data-driven playlist curation** instead of random selections
-- **Comprehensive VGM history** spanning 30 years (1985-2025)
+- **Comprehensive VGM history** spanning 40 years (1985-2025)
 - **Authentic popularity validation** through cross-platform correlation
 - **Clear performance hierarchy** to guide editorial decisions
 - **Balanced representation** of classics and modern hits
@@ -634,7 +623,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 **A:** To expand and improve this VGM canon:
 - **Add Apple Music and TIDAL APIs** for broader platform coverage
 - **Increase dataset size** to 100+ tracks for better statistical significance
-- **Create genre-specific playlists** (Action VGM, RPG VGM, etc.)
+- **Create genre-specific playlists** (Action, RPG, etc.)
 - **Develop seasonal updates** to track popularity changes over time
 - **Partner with game developers** for exclusive soundtrack releases
 
@@ -642,7 +631,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 ## 📊 **Share: Paint a Picture (or a Graph)** {#share-the-final-chart}
 
-So yes, we discovered a lot of good stuff. Now let's make it look pretty.
+So yes, a lot of good stuff. Now let's make it look pretty.
 
 ### **Visualization Strategy & Design Process**
 
@@ -658,7 +647,7 @@ Before diving into Tableau, I decided on six core visualizations:
 
 ### **Current Dashboard: Koopa Video Game Music Streaming Analysis**
 
-My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). (If reading on mobile, please read on desktop or click on the link for best dashboard view.)
+Here is my interactive [Tableau Public dashboard and charts](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). (If you're reading this on mobile, please read on desktop or click on the link for the best dashboard view.)
 
 **Dashboard Overview:**
 
@@ -699,10 +688,8 @@ device: desktop
 - **Business Value:** Proves unified content strategy works across streaming platforms
 
 **🚀 Business Implications ("So What?"):**
-- **Revenue Potential:** The 14 superstar tracks (31% of dataset) drive disproportionate engagement - focus resources here for maximum ROI
+- **Revenue Potential:** The 14 superstar tracks drive disproportionate engagement - focus resources here for maximum ROI
 - **Cross-Platform Strategy:** r=0.663 correlation proves unified VGM content performs consistently across platforms
-- **Playlist Performance:** Superstar tracks can anchor playlists with 15-20% higher engagement than average VGM content
-- **Content Investment:** 31% of tracks generate 60%+ of engagement - clear prioritization strategy for content teams
 
 **[View Chart 2 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart2SuperstarTracks?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
@@ -751,9 +738,8 @@ device: desktop
 
 **🚀 Business Implications ("So What?"):**
 - **IP Strategy:** Mario's 22% dominance means securing Mario VGM rights is critical for any serious VGM playlist
-- **Licensing Negotiations:** 22% market share gives Nintendo significant leverage in licensing discussions
+- **Licensing Negotiations:** Market share gives Nintendo significant leverage in licensing discussions
 - **Content Investment:** Mario VGM justifies premium licensing fees and dedicated editorial resources
-- **Competitive Positioning:** Platforms without Mario VGM are at a 22% disadvantage in VGM market share
 
 **[View Chart 4 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart5IPAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
@@ -777,9 +763,9 @@ device: desktop
 ### **Future Visualization Opportunities**
 
 **Additional Charts for Future Development:**
-While our current dashboard covers the core insights, these additional visualizations could further enhance the story:
+While my current Tableau covers the core insights, additional visualizations could further enhance the story:
 
-1. **Release Year Timeline** - Show the 30-year span and temporal trends in more detail
+1. **Release Year Timeline** - Show the 40-year span and temporal trends in more detail
 2. **Platform Performance Heat Map** - Visualize which gaming platforms produce the most popular VGM
 3. **Developer/Publisher Analysis** - Compare performance across major studios beyond Nintendo
 4. **Outlier Analysis** - Highlight and explain unusual performers with detailed annotations
@@ -863,7 +849,7 @@ Streaming data successfully identifies a new VGM canon that balances historical 
 - **Hybrid approach validated:** My curated picks competed successfully with algorithm-discovered tracks
 - **Cross-platform correlation:** Strong correlation (r=0.663) proved data quality and authentic popularity
 - **Technical execution:** Successfully integrated three APIs with proper error handling and data validation
-- **Business impact:** Identified 7 superstar tracks with clear commercial value
+- **Business impact:** Identified superstar tracks with clear commercial value
 
 **What I'd Do Differently:**
 - **Start with smaller scope:** 45 tracks was perfect - 175 was overwhelming initially
@@ -874,13 +860,13 @@ Streaming data successfully identifies a new VGM canon that balances historical 
 **Key Takeaways:**
 - **Data + human expertise > either alone:** The hybrid approach created a more meaningful canon
 - **Quality over quantity:** 45 well-curated tracks beat 175 random ones
-- **Cross-validation is crucial:** Spotify + YouTube correlation validated our methodology
+- **Cross-validation is crucial:** Spotify + YouTube correlation validated methodology
 - **Context matters:** Game metadata (release dates, genres, platforms) enriched the analysis significantly
 
 
 
 Thanks for reading!
 
-Now go outside or read a book.
+Now go outside and read a book.
 
 :)

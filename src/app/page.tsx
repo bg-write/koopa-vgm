@@ -4,6 +4,7 @@
 
 import Link from 'next/link';
 import KoopaChart from '../components/KoopaChart';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -53,17 +54,17 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-4 mb-4 border-l-4 border-koopa-green max-w-2xl">
                 <h3 className="text-lg font-semibold text-koopa-green mb-2">What is Koopa?</h3>
                 <p className="text-gray-700 mb-0">
-                  A data-driven analysis of video game music popularity using <strong>Spotify and YouTube streaming data</strong>. Think of it like a Billboard chart for video game music—identifying which tracks are actually being listened to today, not just historically important.
+                  A data-driven analysis of video game music (VGM) popularity using <strong>Spotify and YouTube streaming data</strong>. It&apos;s like a Billboard chart for VGM—identifying which tracks are actually being listened to today, not just historically important.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center md:justify-start">
-                <a 
+              <strong><a 
                   href="/how-i-made-koopa"
                   className="text-koopa-green hover:text-koopa-green-dark underline decoration-koopa-green/60 hover:decoration-koopa-green transition-all duration-200"
                 >
                   Read the full case study.
-                </a>
+                </a></strong>
               </div>
             </div>
           </div>
@@ -74,17 +75,8 @@ export default function Home() {
           
 
           
-          {/* Tech Stack Footer */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js, Tailwind CSS, and Cursor. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber (me). Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
-            </p>
-            <div className="flex justify-center space-x-6 text-sm">
-              <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
-              <span className="text-gray-400">|</span>
-              <a href="/how-i-made-koopa" className="text-koopa-green hover:text-koopa-green-dark underline">How I Made Koopa</a>
-            </div>
-          </div>
+          {/* Footer */}
+          <Footer />
         </section>
     </main>
   )

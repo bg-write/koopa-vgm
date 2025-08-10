@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 
+/* Prism.js theme - we'll use our custom colors instead */
+
 @theme {
   --color-koopa-green: #228B22;
   --color-koopa-green-light: #32CD32;
@@ -113,7 +115,7 @@
   border-left-color: var(--color-koopa-green);
 }
 
-/* Code Styling */
+/* Code Styling - Enhanced for Cursor-like appearance */
 .markdown-content code {
   @apply bg-gray-100 px-2 py-1 rounded text-sm;
   font-family: var(--font-mono);
@@ -122,11 +124,153 @@
 
 .markdown-content pre {
   @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-700;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%) !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  font-family: 'Space Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.3px !important;
 }
 
 .markdown-content pre code {
   @apply bg-transparent text-gray-100 p-0;
   color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+/* Enhanced syntax highlighting colors for code blocks using Prism.js */
+.markdown-content pre .token.keyword {
+  color: #569cd6 !important; /* Blue for keywords */
+  font-weight: 600 !important;
+}
+
+.markdown-content pre .token.string {
+  color: #ce9178 !important; /* Orange for strings */
+}
+
+.markdown-content pre .token.number {
+  color: #b5cea8 !important; /* Light green for numbers */
+}
+
+.markdown-content pre .token.comment {
+  color: #6a9955 !important; /* Green for comments */
+  font-style: italic !important;
+}
+
+.markdown-content pre .token.function {
+  color: #dcdcaa !important; /* Yellow for functions */
+  font-weight: 500 !important;
+}
+
+.markdown-content pre .token.class-name {
+  color: #4ec9b0 !important; /* Teal for classes */
+  font-weight: 600 !important;
+}
+
+.markdown-content pre .token.variable {
+  color: #9cdcfe !important; /* Light blue for variables */
+}
+
+.markdown-content pre .token.operator {
+  color: #d4d4d4 !important; /* Light gray for operators */
+}
+
+.markdown-content pre .token.punctuation {
+  color: #d4d4d4 !important; /* Light gray for punctuation */
+}
+
+.markdown-content pre .token.property {
+  color: #9cdcfe !important; /* Light blue for properties */
+}
+
+.markdown-content pre .token.boolean {
+  color: #569cd6 !important; /* Blue for booleans */
+}
+
+.markdown-content pre .token.null {
+  color: #569cd6 !important; /* Blue for null values */
+}
+
+.markdown-content pre .token.tag {
+  color: #569cd6 !important; /* Blue for HTML/XML tags */
+}
+
+.markdown-content pre .token.attr-name {
+  color: #9cdcfe !important; /* Light blue for attribute names */
+}
+
+.markdown-content pre .token.attr-value {
+  color: #ce9178 !important; /* Orange for attribute values */
+}
+
+.markdown-content pre .token.important {
+  color: #f44747 !important; /* Red for important keywords */
+  font-weight: bold !important;
+}
+
+.markdown-content pre .token.builtin {
+  color: #4ec9b0 !important; /* Teal for built-in functions */
+}
+
+.markdown-content pre .token.regex {
+  color: #d16969 !important; /* Red for regex patterns */
+}
+
+/* Ensure all tokens are visible against dark background */
+.markdown-content pre .token {
+  color: #ffffff !important; /* Default white for any unhandled tokens */
+}
+
+/* Code block header styling (if you want to add language labels) */
+.markdown-content pre::before {
+  content: attr(data-language);
+  display: block;
+  background: #404040;
+  color: #d4d4d4;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px 4px 0 0;
+  margin: -16px -16px 16px -16px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Base Prism.js styling */
+.markdown-content pre[class*="language-"] {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%) !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+.markdown-content pre[class*="language-"] code {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Ensure our custom colors override Prism.js defaults */
+.markdown-content pre .token {
+  text-shadow: none !important;
+}
+
+/* Fallback styling for when Prism.js isn't loaded yet */
+.markdown-content pre:not([class*="language-"]) {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%) !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ensure all code blocks have the right font and spacing */
+.markdown-content pre {
+  font-family: 'Space Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.3px !important;
 }
 
 /* Force code colors with higher specificity */

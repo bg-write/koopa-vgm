@@ -4,6 +4,38 @@ import Link from 'next/link';
 import MarkdownContent from '../../components/MarkdownContent';
 import ExecutiveSummary from '../../components/ExecutiveSummary';
 import FloatingToC from '../../components/FloatingToC';
+import Footer from '../../components/Footer';
+
+// Function to extract sections from markdown content
+function extractSectionsFromMarkdown(markdownContent: string) {
+  const lines = markdownContent.split('\n');
+  const sections: Array<{ id: string; title: string; emoji: string }> = [];
+  
+  // Define the main sections with their exact IDs and emojis
+  const mainSections = [
+    { id: 'scenario-what-the-heck-is-koopa', title: 'Scenario: What is "Koopa"?', emoji: '🐢' },
+    { id: 'ask-lets-make-a-playlist', title: 'Ask: Let\'s Make a Playlist', emoji: '🎵' },
+    { id: 'prepare-o-data-where-art-thou', title: 'Prepare: O Data, Where Art Thou?', emoji: '📊' },
+    { id: 'process-the-actual-work', title: 'Process: Gone Fishin\'', emoji: '🔄' },
+    { id: 'analyze-what-did-i-find', title: 'Analyze: A Whole Lotta Mario', emoji: '📈' },
+    { id: 'share-the-final-chart', title: 'Share: Paint a Picture (or a Graph)', emoji: '📊' },
+    { id: 'act-whats-next', title: 'Act: Koopa Keeps Growing', emoji: '🎯' },
+    { id: 'lessons-learned', title: 'Lessons Learned', emoji: '📚' }
+  ];
+
+  // Find these main sections in the markdown content
+  mainSections.forEach(section => {
+    // Look for the section in the markdown
+    const sectionFound = lines.some(line => {
+      return line.includes(`{#${section.id}}`);
+    });
+    
+    if (sectionFound) {
+      sections.push(section);
+    }
+  });
+  return sections;
+}
 
 export default function HowIMadeKoopa() {
   // Read the markdown file
@@ -15,17 +47,8 @@ export default function HowIMadeKoopa() {
     .replace(/^# How I Made Koopa\n\n\*Using Spotify and YouTube streaming data to find a new "classic rock" of video game music\.\*\n\n\*\*By Brady Gerber\*\*\n\n---\n\n/, '')
     .replace(/^> \*\*📊 Dataset V1 \(August 2025\)\*\*\n\n## 📋 \*\*Table of Contents\*\*\n\n/, '## 📋 **Table of Contents**\n\n');
 
-  // Define sections for floating ToC - IDs must match markdown headers exactly
-  const sections = [
-    { id: 'scenario-what-the-heck-is-koopa', title: 'What is "Koopa"?', emoji: '🎯' },
-    { id: 'ask-lets-make-a-playlist', title: 'The Business Problem', emoji: '🎵' },
-    { id: 'prepare-o-data-where-art-thou', title: 'Data Collection & Methodology', emoji: '📊' },
-    { id: 'process-the-actual-work', title: 'Process & Analysis', emoji: '🔄' },
-    { id: 'analyze-what-did-i-find', title: 'Key Findings & Insights', emoji: '📈' },
-    { id: 'share-the-final-chart', title: 'Final Results', emoji: '📊' },
-    { id: 'act-whats-next', title: 'Next Steps & Recommendations', emoji: '🎯' },
-    { id: 'lessons-learned', title: 'Lessons Learned', emoji: '📚' }
-  ];
+  // Extract sections dynamically from markdown content
+  const sections = extractSectionsFromMarkdown(markdownContentWithoutTitle);
 
 
   return (
@@ -58,7 +81,7 @@ export default function HowIMadeKoopa() {
               >
                 How I Made Koopa
               </h1>
-              <p className="text-gray-700 mb-4 italic">Using Spotify and YouTube streaming data to determine the most popular video game music.</p>
+              <p className="text-gray-700 mb-4 italic">Using Spotify and YouTube streaming data to determine the most popular and beloved video game music.</p>
               <p className="text-gray-700"><strong>By Brady Gerber</strong></p>
             </div>
             
@@ -68,17 +91,8 @@ export default function HowIMadeKoopa() {
             {/* Render the rest of the markdown content (starting after the title section) */}
             <MarkdownContent content={markdownContentWithoutTitle} />
             
-            {/* Tech Stack Footer */}
-            <div className="mt-12 text-center">
-              <p className="text-sm text-gray-600 mb-4">
-                Built with Next.js, Tailwind CSS, and Cursor. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber (me). Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
-              </p>
-              <div className="flex justify-center space-x-2 text-sm">
-                <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
-                <span className="text-gray-400">|</span>
-                <Link href="/how-i-made-koopa" className="text-koopa-green hover:text-koopa-green-dark underline">How I Made Koopa</Link>
-              </div>
-                      </div>
+            {/* Footer */}
+            <Footer />
         </section>
       </main>
       

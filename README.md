@@ -94,6 +94,7 @@
 - **Security improvements**: Eliminated vulnerable dependencies and migrated to secure JSON pipeline
 - **Tableau integration**: Implemented modern Embedding API v3 with custom markdown processing
 - **Hydration stability**: Resolved React SSR/CSR mismatches for production deployment
+- **TypeScript compatibility**: Custom type declarations for Tableau elements ensuring build success
 
 ---
 
@@ -124,6 +125,9 @@ koopa-vgm/
 │   └── images/                      # 45 optimized game artwork images
 ├── scripts/
 │   └── convert-excel-to-json.js     # Data conversion script with clean field mapping
+├── src/
+│   └── types/
+│       └── tableau.d.ts             # TypeScript declarations for Tableau elements
 ├── README.md                        # Project documentation
 └── package.json                     # Dependencies and scripts
 ```

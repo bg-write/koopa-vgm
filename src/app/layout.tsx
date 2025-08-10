@@ -15,8 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Koopa - Video Game Music Canon",
-  description: "A new video game music canon using Spotify and YouTube data",
+  metadataBase: new URL('https://koopa-video-game-music.vercel.app'),
+  title: "Koopa: The Most Beloved Video Game Music Ever?",
+  description: "A data-driven analysis of video game music popularity using Spotify and YouTube streaming data. Discover which VGM tracks are actually being listened to today!",
+  icons: {
+    icon: '/koopa-logo.png',
+    shortcut: '/koopa-logo.png',
+    apple: '/koopa-logo.png',
+  },
+  openGraph: {
+    title: "Koopa: The Most Beloved Video Game Music Ever?",
+    description: "A data-driven analysis of video game music popularity using Spotify and YouTube streaming data",
+    type: 'website',
+    images: [
+      {
+        url: '/koopa-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Koopa - Video Game Music Canon',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Koopa: The Most Beloved Video Game Music Ever?",
+    description: "A data-driven analysis of video game music popularity using Spotify and YouTube streaming data",
+    images: ['/koopa-logo.png'],
+  },
 };
 
 export default function RootLayout({

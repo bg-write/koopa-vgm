@@ -58,7 +58,7 @@ export default function HowIMadeKoopa() {
               >
                 How I Made Koopa
               </h1>
-              <p className="text-gray-700 mb-4 italic">Using Spotify and YouTube streaming data to determine the most popular (and engaging) video game music.</p>
+              <p className="text-gray-700 mb-4 italic">Using Spotify and YouTube streaming data to determine the most popular video game music.</p>
               <p className="text-gray-700"><strong>By Brady Gerber</strong></p>
             </div>
             

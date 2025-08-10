@@ -126,8 +126,16 @@ koopa-vgm/
 ├── scripts/
 │   └── convert-excel-to-json.js     # Data conversion script with clean field mapping
 ├── src/
-│   └── types/
-│       └── tableau.d.ts             # TypeScript declarations for Tableau elements
+│   ├── app/                         # Next.js app router pages
+│   │   ├── layout.tsx               # Root layout with navigation
+│   │   ├── page.tsx                 # Home page with interactive chart
+│   │   └── how-i-made-koopa/       # Case study page
+│   └── components/                  # React components
+│       ├── MarkdownContent.tsx      # Markdown processing with ID management
+│       ├── FloatingToC.tsx          # Floating table of contents
+│       ├── ExecutiveSummary.tsx     # Case study summary component
+│       ├── KoopaChart.tsx           # Interactive data chart
+│       └── Navigation.tsx           # Site navigation header
 ├── README.md                        # Project documentation
 └── package.json                     # Dependencies and scripts
 ```
@@ -204,17 +212,41 @@ npm start
 
 ## 📊 **Interactive Dashboard**
 
-![Video Game Music Canon Dashboard](./public/tableau_dashboard_v1.png)
-*Interactive Tableau dashboard showing cross-platform correlation, top performers, and discovery methods*
+![Koopa VGM Interactive Dashboard - 6 Charts](./public/koopa-dashboard-2025.png)
+*Interactive Tableau dashboard featuring 6 business-focused charts: Nintendo dominance, superstar tracks correlation, time distribution analysis, IP performance, and more*
 
 **Dashboard Features:**
-- **Cross-platform correlation analysis** (r = 0.663)
-- **Top 10 performers visualization** with discovery method breakdown
-- **Discovery distribution** showing data-driven vs curated approach
-- **[View Full Dashboard](https://public.tableau.com/views/VideoGameMusicCanonAnalysis/OverallAnalysisDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+- **6 interactive business charts** embedded directly in case study
+- **Cross-platform correlation analysis** (r = 0.663) with superstar tracks
+- **Nintendo dominance visualization** (42% market share)
+- **Time distribution insights** (classic vs modern VGM appeal)
+- **IP analysis** showing Mario's 22% dominance
+- **[View Full Dashboard](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 **✅ Completed Enhancements:**
 - **6 interactive business charts** embedded directly in case study
+
+---
+
+## 🧹 **Recent Refinements & Cleanup (August 2025)**
+
+### **Code Quality Improvements**
+- **Eliminated unused components** - Removed `TableauEmbed`, `ScrollSection`, `ClickableTitle`, and `tableau.d.ts`
+- **Simplified component structure** - Inlined simple components to reduce complexity
+- **Removed debug code** - Cleaned up console.log statements and debug styles
+- **Fixed build issues** - Resolved server component limitations with proper client directives
+
+### **Performance Optimizations**
+- **Reduced bundle size** - Eliminated unnecessary dependencies and components
+- **Cleaner component tree** - Streamlined React component hierarchy
+- **Optimized imports** - Removed unused imports and dependencies
+- **Build process** - Successfully builds and deploys without errors
+
+### **Maintainability Improvements**
+- **Simplified file structure** - Cleaner, more focused component organization
+- **Reduced technical debt** - Eliminated redundant CSS and duplicate functionality
+- **Better separation of concerns** - Each component has a clear, single responsibility
+- **Easier debugging** - Cleaner codebase makes troubleshooting simpler
 - **Nintendo dominance analysis** (42% representation) with horizontal bar chart
 - **Superstar tracks visualization** (17 tracks) with scatter plot and trend line (r = 0.663)
 - **Time distribution analysis** (9% Spotify releases pre-2010, 56% games pre-2010) with side-by-side charts
@@ -297,24 +329,64 @@ npm start
 
 ---
 
+## 🛠️ **Current Technical Stack**
+
+### **Frontend Framework**
+- **Next.js 15.4.6** - React framework with App Router
+- **React 19.1.0** - Latest React with modern hooks and patterns
+- **TypeScript 5** - Type-safe development with strict configuration
+- **Tailwind CSS 4** - Utility-first CSS framework for rapid development
+
+### **Core Components**
+- **MarkdownContent** - Handles markdown parsing with custom ID management
+- **FloatingToC** - Floating table of contents with smooth scrolling
+- **KoopaChart** - Interactive data visualization component
+- **ExecutiveSummary** - Case study summary with key insights
+- **Navigation** - Responsive site navigation header
+
+### **Data Processing**
+- **Marked library** - Markdown to HTML conversion with custom renderers
+- **JSON data pipeline** - Pre-processed data for optimal performance
+- **Tableau integration** - Embedded interactive charts via API v3
+
+### **Build & Development**
+- **ESLint** - Code quality and consistency
+- **PostCSS** - CSS processing and optimization
+- **Husky** - Git hooks for pre-commit validation
+
+---
+
+## 🎯 **Project Status & Accomplishments**
+
+### **✅ Completed Features**
+- **Core case study** - Complete with all sections and interactive elements
+- **Data visualization** - 45-track interactive chart with Spotify/YouTube integration
+- **Tableau dashboard** - 6 business-focused charts embedded in case study
+- **Navigation system** - Working table of contents with smooth scrolling
+- **Responsive design** - Mobile-first approach with professional presentation
+- **Data pipeline** - Clean JSON structure with comprehensive metadata
+
+### **🔧 Recent Improvements (August 2025)**
+- **Code cleanup** - Eliminated unused components and simplified architecture
+- **Performance optimization** - Reduced bundle size and improved build process
+- **Maintainability** - Cleaner component structure and better separation of concerns
+- **Build stability** - Resolved all build issues and linting errors
+
+---
+
 ## 🔮 **Future Enhancements**
 
-### **Immediate Next Steps**
+### **Potential Improvements**
 - **Advanced filtering** by game, year, or genre
 - **Interactive data exploration** with drill-down capabilities
 - **Social sharing** with track-specific links
 - **Performance monitoring** and optimization
 
-### **Planned Features**
-- **Real-time data updates** from streaming APIs
-- **Advanced analytics** with trend analysis
-- **User preferences** and customization options
-- **Performance monitoring** and optimization
-
-### **Technical Improvements**
+### **Technical Roadmap**
 - **Additional data sources** (Apple Music, TIDAL, Amazon Music)
 - **Predictive modeling** for new game soundtracks
 - **International market analysis** with regional preferences
+- **Real-time data updates** from streaming APIs
 - **Seasonal trend analysis** for VGM popularity patterns
 - **Advanced Tableau features** - Custom filtering and interactive elements
 
@@ -343,12 +415,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Brady Gerber** - Writer, Music Journalist & Data Analyst
 
 - **Portfolio**: [Website](https://bradygerber.com/) & [LinkedIn](https://www.linkedin.com/in/brady-gerber/)
-
----
-
-**Last updated**: August 2025
-
----
 
 *Built with ❤️*
 

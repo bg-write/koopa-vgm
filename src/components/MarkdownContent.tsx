@@ -3,6 +3,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { marked } from 'marked';
 
+// Configure marked to handle GitHub-style IDs
+marked.use({
+  gfm: true,
+  breaks: true
+});
+
 interface MarkdownContentProps {
   content: string;
 }
@@ -13,33 +19,73 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   const observerRef = useRef<MutationObserver | null>(null);
   const [isHydrated, setIsHydrated] = useState(false);
 
-  // Process headings and add back-to-top links
+    // Process headings and add back-to-top links
   const processContent = useCallback(() => {
     const node = contentRef.current;
     if (!node) return;
 
-    // First, process all headings and remove {#id} syntax
+    // First, manually set IDs for our specific sections
+    const sectionMappings = [
+      { text: 'Table of Contents', id: 'table-of-contents' },
+      { text: 'Scenario: What is "Koopa"?', id: 'scenario-what-the-heck-is-koopa' },
+      { text: 'Ask: Let\'s Make a Playlist', id: 'ask-lets-make-a-playlist' },
+      { text: 'Prepare: O Data, Where Art Thou?', id: 'prepare-o-data-where-art-thou' },
+      { text: 'Process: Gone Fishin\'', id: 'process-the-actual-work' },
+      { text: 'Analyze: A Whole Lotta Mario', id: 'analyze-what-did-i-find' },
+      { text: 'Share: Paint a Picture (or a Graph)', id: 'share-the-final-chart' },
+      { text: 'Act: Koopa Keeps Growing', id: 'act-whats-next' },
+      { text: 'Lessons Learned', id: 'lessons-learned' }
+    ];
+
+    // Set IDs for our specific sections
+    sectionMappings.forEach(({ text, id }) => {
+      const headings = node.querySelectorAll('h2');
+      headings.forEach((heading) => {
+        if (heading.textContent?.includes(text)) {
+          heading.id = id;
+        }
+      });
+    });
+
+    // Then process remaining headings with auto-generated IDs
     const headings = node.querySelectorAll('h1, h2, h3, h4, h5, h6');
-
     headings.forEach((heading) => {
-      const text = heading.textContent || '';
-      const idMatch = text.match(/\{#([^}]+)\}$/);
-
-      if (idMatch) {
-        const id = idMatch[1];
-        heading.id = id;
-        
-        // Remove the {#id} syntax from the displayed text
-        const originalHTML = heading.innerHTML;
-        const cleanHTML = originalHTML.replace(/\{#[^}]+\}$/, '');
-        heading.innerHTML = cleanHTML;
-      } else {
-        // Auto-generate ID from heading text
+      if (!heading.id) {
+        const text = heading.textContent || '';
         const id = text.toLowerCase()
           .replace(/\s+/g, '-')
           .replace(/[^a-z0-9-]/g, '')
-          .replace(/^-+|-+$/g, ''); // Remove leading/trailing dashes
+          .replace(/^-+|-+$/g, '');
         heading.id = id;
+      }
+    });
+
+    // Remove {#id} syntax from displayed content
+    headings.forEach((heading) => {
+      if (heading.innerHTML.includes('{#')) {
+        // Remove the {#id} syntax from the displayed text
+        heading.innerHTML = heading.innerHTML.replace(/\s*\{#[^}]+\}/g, '');
+      }
+    });
+
+    // Process Table of Contents links to ensure they work
+    const tocLinks = node.querySelectorAll('a[href^="#"]');
+    tocLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          // Add click handler for smooth scrolling
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            targetElement.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          });
+        }
       }
     });
 
@@ -253,7 +299,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     };
   }, [content, processContent, isHydrated]);
 
-  // Process tableau blocks before markdown processing
+  // Process tableau blocks and {#id} syntax before markdown processing
   const processedContent = content.replace(
     /:::tableau\n([\s\S]*?)\n:::/g,
     (match, blockContent) => {
@@ -274,6 +320,8 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
       </div>`;
     }
   );
+
+
 
   // Render the markdown content
   const htmlContent = marked(processedContent) as string;

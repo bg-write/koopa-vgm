@@ -8,15 +8,15 @@
 
 > **📊 Dataset V1 (August 2025)**
 
-## 📋 **Table of Contents**
+## 📋 **Table of Contents** {#table-of-contents}
 
-- [🎯 What is Koopa?](#scenario-what-the-heck-is-koopa)
+- [🎯 What is "Koopa"?](#scenario-what-the-heck-is-koopa)
 - [🎵 The Business Problem](#ask-lets-make-a-playlist)
 - [📊 Data Collection & Methodology](#prepare-o-data-where-art-thou)
-- [🔧 Process & Analysis](#process-the-actual-work)
+- [🔄 Process & Analysis](#process-the-actual-work)
 - [📈 Key Findings & Insights](#analyze-what-did-i-find)
-- [🎮 Final Results](#share-the-final-chart)
-- [🚀 Next Steps & Recommendations](#act-whats-next)
+- [📊 Final Results](#share-the-final-chart)
+- [🎯 Next Steps & Recommendations](#act-whats-next)
 - [📚 Lessons Learned](#lessons-learned)
 
 > **Quick Navigation:** If you want to skip to the good stuff, check out the [final results](/).
@@ -39,7 +39,7 @@ Yes, [*that* Koopa](https://en.wikipedia.org/wiki/Koopa_Troopa).
 
 ---
 
-## 🎵 **Ask: Let's Make a Playlist**
+## 🎵 **Ask: Let's Make a Playlist** {#ask-lets-make-a-playlist}
 
 To make life easier and impose some structure, I decided to act like a consultant for a music streaming company.
 
@@ -64,7 +64,7 @@ OK, cool.
 
 ---
 
-## 📊 **Prepare: O Data, Where Art Thou?**
+## 📊 **Prepare: O Data, Where Art Thou?** {#prepare-o-data-where-art-thou}
 
 ### **First step: What data am I using?**
 After scanning through several public datasets, I found a few nice options regarding video games, but none that I needed regarding VGM specifically. Very sad.
@@ -630,12 +630,7 @@ My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMus
 
 **🎯 Chart 1: Publisher Dominance (Bar Chart)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Sheet1
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 1: Nintendo Dominance](/chart1.png)
 
 - **Visual Type:** Horizontal bar chart
 - **Key Insight:** Nintendo dominates with 42% market share across all VGM tracks
@@ -645,12 +640,7 @@ device: desktop
 
 **📈 Chart 2: Superstar Tracks (Scatter Plot)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart2SuperstarTracks
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 2: Superstar Tracks Correlation](/chart2.png)
 
 - **Visual Type:** Scatter plot with trend line and superstar highlighting
 - **Key Insight:** Strong positive correlation (r = 0.663) between Spotify popularity and YouTube views
@@ -661,12 +651,7 @@ device: desktop
 
 **🎮 Chart 3A: Game Releases by Decade (Bar Chart)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart3AGameReleases
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 3A: Game Releases by Decade](/chart3a.png)
 
 - **Visual Type:** Side-by-side bar chart (before/after 2010)
 - **Key Insight:** 56% of games were originally released before 2010 vs 44% after 2010
@@ -676,12 +661,7 @@ device: desktop
 
 **📊 Chart 3B: Spotify Releases by Decade (Bar Chart)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart3BSpotifyReleases
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 3B: Spotify Releases by Decade](/chart3b.png)
 
 - **Visual Type:** Side-by-side bar chart (before/after 2010)
 - **Key Insight:** Only 9% of Spotify tracks are credited before 2010 vs 91% after 2010
@@ -691,12 +671,7 @@ device: desktop
 
 **🏆 Chart 4: IP Analysis (Bar Chart)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart4IPAnalysis
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 4: IP Analysis](/chart4.png)
 
 - **Visual Type:** Horizontal bar chart with size encoding
 - **Key Insight:** Mario leads with 22% of calculated intellectual property
@@ -706,12 +681,7 @@ device: desktop
 
 **🎵 Chart 5: Cover vs Original Performance (Pie Chart)**
 
-:::tableau
-src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart5OriginalsvsCovers
-width: 100%
-height: 600
-device: desktop
-:::
+![Chart 5: Cover vs Original Performance](/chart5.png)
 
 - **Visual Type:** Pie chart with performance comparison
 - **Key Insight:** Performance analysis between covers and original tracks
@@ -802,7 +772,7 @@ Streaming data successfully identifies a new VGM canon that balances historical 
 
 ---
 
-## 📚 **Lessons Learned**
+## 📚 **Lessons Learned** {#lessons-learned}
 
 **What Went Well:**
 - **Hybrid approach validated:** My curated picks competed successfully with algorithm-discovered tracks

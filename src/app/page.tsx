@@ -1,17 +1,38 @@
 
 
+"use client";
+
 import Link from 'next/link';
-import ScrollSection from '../components/ScrollSection';
-import ClickableTitle from '../components/ClickableTitle';
 import KoopaChart from '../components/KoopaChart';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-koopa-cream">
       {/* Hero Section */}
-      <ScrollSection>
-        <section className="max-w-4xl mx-auto px-6 py-12">
-          <ClickableTitle />
+              <section className="max-w-4xl mx-auto px-6 py-12">
+          <div className="mb-4 md:mb-8">
+            <a 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="inline-block hover:opacity-80 transition-opacity"
+            >
+              <h1 
+                className="text-4xl md:text-4xl font-bold mb-3 md:mb-6"
+                style={{
+                  background: 'linear-gradient(to right, #228B22, #32CD32)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontFamily: 'var(--font-header)'
+                }}
+              >
+                🎮 Koopa: The Most Beloved Video Game Music Ever?
+              </h1>
+            </a>
+          </div>
           
           {/* Top Koopa and Description */}
           <div className="flex flex-col md:flex-row items-center justify-between mb-4 gap-2 md:gap-6">
@@ -56,7 +77,7 @@ export default function Home() {
           {/* Tech Stack Footer */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600 mb-4">
-              Built with Next.js, TypeScript, Tailwind CSS, and Cursor AI. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber. Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
+              Built with Next.js, Tailwind CSS, and Cursor. Data pulled from Spotify, YouTube, and RAWG APIs using Python. All images respectfully taken from Wikipedia. This app was made by Brady Gerber (me). Thank you, Sam and Emily, for the initial feedback. Video game music rules. Check out Koopa&apos;s <a href="https://github.com/bg-write/koopa-vgm" target="_blank" rel="noopener noreferrer" className="text-koopa-green hover:text-koopa-green-dark underline">GitHub</a>.
             </p>
             <div className="flex justify-center space-x-6 text-sm">
               <Link href="/" className="text-koopa-green hover:text-koopa-green-dark underline">Home</Link>
@@ -65,7 +86,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </ScrollSection>
     </main>
   )
 }

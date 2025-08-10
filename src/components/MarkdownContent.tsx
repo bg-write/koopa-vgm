@@ -216,31 +216,69 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   useEffect(() => {
     if (!isHydrated) return;
     
-    const processTableauEmbeds = () => {
-      const placeholders = contentRef.current?.querySelectorAll('.tableau-embed');
-      if (placeholders) {
-        placeholders.forEach((placeholder) => {
-          // Skip if already processed
-          if (placeholder.querySelector('tableau-viz')) return;
+      const processTableauEmbeds = () => {
+    const placeholders = contentRef.current?.querySelectorAll('.tableau-embed');
+    if (placeholders) {
+      placeholders.forEach((placeholder) => {
+        // Skip if already processed
+        if (placeholder.querySelector('tableau-viz')) return;
+        
+        const src = placeholder.getAttribute('data-src');
+        const width = placeholder.getAttribute('data-width') || '100%';
+        const height = placeholder.getAttribute('data-height') || '600';
+        const device = placeholder.getAttribute('data-device') || 'desktop';
+        
+        if (src) {
+          // Show loading state
+          const loadingDiv = placeholder.querySelector('div');
+          if (loadingDiv) {
+            loadingDiv.innerHTML = `
+              <div style="text-align: center;">
+                <div style="width: 40px; height: 40px; border: 4px solid #e5e7eb; border-top: 4px solid #10b981; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 16px;"></div>
+                <p style="color: #6b7280; font-size: 14px; margin: 0 0 8px 0;">Loading interactive chart...</p>
+                <p style="color: #9ca3af; font-size: 12px; margin: 0;">This may take a few seconds</p>
+              </div>
+            `;
+          }
           
-          const src = placeholder.getAttribute('data-src');
-          const width = placeholder.getAttribute('data-width') || '100%';
-          const height = placeholder.getAttribute('data-height') || '600';
-          const device = placeholder.getAttribute('data-device') || 'desktop';
+          const tableauViz = document.createElement('tableau-viz');
+          tableauViz.setAttribute('src', src);
+          tableauViz.setAttribute('width', width);
+          tableauViz.setAttribute('height', height);
+          tableauViz.setAttribute('device', device);
           
-          if (src) {
-            const tableauViz = document.createElement('tableau-viz');
-            tableauViz.setAttribute('src', src);
-            tableauViz.setAttribute('width', width);
-            tableauViz.setAttribute('height', height);
-            tableauViz.setAttribute('device', device);
-            
+          // Add accessibility attributes
+          tableauViz.setAttribute('role', 'img');
+          tableauViz.setAttribute('aria-label', 'Interactive data visualization');
+          
+          // Add mobile responsiveness
+          if (window.innerWidth < 768) {
+            tableauViz.setAttribute('device', 'phone');
+            tableauViz.style.width = '100%';
+            tableauViz.style.height = '400px';
+          }
+          
+          // Add error handling
+          tableauViz.addEventListener('error', () => {
+            placeholder.innerHTML = `
+              <div style="height: ${height}px; background: #fef2f2; display: flex; align-items: center; justify-content: center; border: 2px dashed #fca5a5; border-radius: 8px; min-height: 400px;" role="alert" aria-label="Chart loading error">
+                <div style="text-align: center;">
+                  <p style="color: #dc2626; font-size: 14px; margin: 0 0 8px 0;">Chart failed to load</p>
+                  <p style="color: #f87171; font-size: 12px; margin: 0;">Please refresh the page or try again later</p>
+                </div>
+              </div>
+            `;
+          });
+          
+          // Replace loading state with chart
+          setTimeout(() => {
             placeholder.innerHTML = '';
             placeholder.appendChild(tableauViz);
-          }
-        });
-      }
-    };
+          }, 500); // Small delay to show loading state
+        }
+      });
+    }
+  };
 
     // Initial processing
     const timer = setTimeout(processTableauEmbeds, 100);
@@ -314,8 +352,11 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
       });
       
       return `<div class="tableau-embed" data-src="${props.src}" data-width="${props.width || '100%'}" data-height="${props.height || '600'}" data-device="${props.device || 'desktop'}">
-        <div style="height: ${props.height || '600'}px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border: 2px dashed #d1d5db; border-radius: 8px;">
-          <p style="color: #6b7280; font-size: 14px;">Loading Tableau visualization...</p>
+        <div style="height: ${props.height || '600'}px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border: 2px dashed #d1d5db; border-radius: 8px; min-height: 400px;" role="status" aria-label="Loading Tableau visualization">
+          <div style="text-align: center;">
+            <p style="color: #6b7280; font-size: 14px; margin: 0 0 8px 0;">Loading Tableau visualization...</p>
+            <p style="color: #9ca3af; font-size: 12px; margin: 0;">Please wait while the interactive chart loads</p>
+          </div>
         </div>
       </div>`;
     }
@@ -328,6 +369,25 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   
   return (
     <div className="prose prose-lg max-w-none">
+      <style jsx>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .tableau-embed {
+          transition: all 0.3s ease;
+        }
+        .tableau-embed:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+          .tableau-embed {
+            margin: 0 -1rem;
+            border-radius: 0;
+          }
+        }
+      `}</style>
       <div 
         ref={contentRef}
         className="markdown-content"

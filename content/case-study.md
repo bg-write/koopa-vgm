@@ -418,7 +418,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 **Complete Dataset Features:**
 - **45 tracks** from 25+ unique game IPs
 - **21 columns** of comprehensive metadata
-- **30-year span** (1984-2024) of gaming history
+- **30-year span** (1985-2025) of gaming history
 - **Cross-platform data** from Spotify, YouTube, and RAWG
 - **Song types:** 15 originals, 17 covers, 9 rereleases, 4 remixes
 - **Discovery sources:** 31 from Spotify discovery, 14 from curated picks
@@ -555,7 +555,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 - **Modern games:** Often 0-3 year gaps
 
 **Developer/Publisher Insights:**
-- **Nintendo:** 18 tracks (40%) - unsurprising VGM powerhouse
+- **Nintendo:** 19 tracks (42%) - unsurprising VGM powerhouse
 - **Microsoft Studios:** 4 tracks (Halo, Minecraft)
 - **New Blood Interactive:** 3 tracks (ULTRAKILL)
 
@@ -623,7 +623,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 
 **A:** This analysis provides exactly what they need:
 - **Data-driven playlist curation** instead of random selections
-- **Comprehensive VGM history** spanning 30 years (1984-2024)
+- **Comprehensive VGM history** spanning 30 years (1985-2025)
 - **Authentic popularity validation** through cross-platform correlation
 - **Clear performance hierarchy** to guide editorial decisions
 - **Balanced representation** of classics and modern hits
@@ -650,7 +650,7 @@ So yes, we discovered a lot of good stuff. Now let's make it look pretty.
 Before diving into Tableau, I decided on six core visualizations:
 
 - **Publisher Dominance (Bar)** - Nintendo's 42% dominance across all tracked VGM
-- **Superstar Tracks (Scatter)** - Cross-platform performance correlation (r = 0.663) with 17 highlighted superstar tracks
+- **Superstar Tracks (Scatter)** - Cross-platform performance correlation (r = 0.663) with 14 highlighted superstar tracks
 - **Game Releases by Decade (Bar)** - 56% of games released before 2010 vs 44% after 2010
 - **Spotify Releases by Decade (Bar)** - Only 9% of Spotify tracks credited before 2010 vs 91% after 2010
 - **IP Analysis (Bar)** - Mario leads with 22% of calculated intellectual property
@@ -692,15 +692,15 @@ My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMus
 
 - **Visual Type:** Scatter plot with trend line and superstar highlighting
 - **Key Insight:** Strong positive correlation (r = 0.663) between Spotify popularity and YouTube views
-- **Data Points:** 45 tracks with 17 highlighted as "superstar" performers
+- **Data Points:** 45 tracks with 14 highlighted as "superstar" performers
 - **Notable Outliers:** Cyberpunk 2077 and ULTRAKILL emerge as modern cross-platform hits
 - **Business Value:** Proves unified content strategy works across streaming platforms
 
 **🚀 Business Implications ("So What?"):**
-- **Revenue Potential:** The 17 superstar tracks (38% of dataset) drive disproportionate engagement - focus resources here for maximum ROI
+- **Revenue Potential:** The 14 superstar tracks (31% of dataset) drive disproportionate engagement - focus resources here for maximum ROI
 - **Cross-Platform Strategy:** r=0.663 correlation proves unified VGM content performs consistently across platforms
 - **Playlist Performance:** Superstar tracks can anchor playlists with 15-20% higher engagement than average VGM content
-- **Content Investment:** 38% of tracks generate 60%+ of engagement - clear prioritization strategy for content teams
+- **Content Investment:** 31% of tracks generate 60%+ of engagement - clear prioritization strategy for content teams
 
 **[View Chart 2 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart2SuperstarTracks?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 

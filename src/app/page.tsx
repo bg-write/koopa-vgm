@@ -41,7 +41,7 @@ export default function Home() {
                   href="/how-i-made-koopa"
                   className="text-koopa-green hover:text-koopa-green-dark underline decoration-koopa-green/60 hover:decoration-koopa-green transition-all duration-200"
                 >
-                  Read the Executive Summary and full Case Study.
+                  Read the full Case Study.
                 </a>
               </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { marked } from 'marked';
 
 interface MarkdownContentProps {
@@ -11,6 +11,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   const contentRef = useRef<HTMLDivElement>(null);
   const processedRef = useRef(false);
   const observerRef = useRef<MutationObserver | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   // Process headings and add back-to-top links
   const processContent = useCallback(() => {
@@ -160,8 +161,85 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     };
   }, [processContent]);
 
+  // Set hydration state
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  // Replace tableau placeholders with actual embeds after hydration
+  useEffect(() => {
+    if (!isHydrated) return;
+    
+    const processTableauEmbeds = () => {
+      const placeholders = contentRef.current?.querySelectorAll('.tableau-embed');
+      if (placeholders) {
+        placeholders.forEach((placeholder) => {
+          // Skip if already processed
+          if (placeholder.querySelector('tableau-viz')) return;
+          
+          const src = placeholder.getAttribute('data-src');
+          const width = placeholder.getAttribute('data-width') || '100%';
+          const height = placeholder.getAttribute('data-height') || '600';
+          const device = placeholder.getAttribute('data-device') || 'desktop';
+          
+          if (src) {
+            const tableauViz = document.createElement('tableau-viz');
+            tableauViz.setAttribute('src', src);
+            tableauViz.setAttribute('width', width);
+            tableauViz.setAttribute('height', height);
+            tableauViz.setAttribute('device', device);
+            
+            placeholder.innerHTML = '';
+            placeholder.appendChild(tableauViz);
+          }
+        });
+      }
+    };
+
+    // Initial processing
+    const timer = setTimeout(processTableauEmbeds, 100);
+
+    // Set up a more persistent observer for development
+    const observer = new MutationObserver((mutations) => {
+      let shouldReprocess = false;
+      
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const element = node as Element;
+              if (element.classList?.contains('tableau-embed') || element.querySelector('.tableau-embed')) {
+                shouldReprocess = true;
+              }
+            }
+          });
+        }
+      });
+
+      if (shouldReprocess) {
+        setTimeout(processTableauEmbeds, 50);
+      }
+    });
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [isHydrated]);
+
+
+
   // Initial processing
   useEffect(() => {
+    if (!isHydrated) return;
+    
     // Reset the processed flag when content changes
     processedRef.current = false;
     
@@ -173,10 +251,32 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     return () => {
       clearTimeout(timer);
     };
-  }, [content, processContent]);
+  }, [content, processContent, isHydrated]);
+
+  // Process tableau blocks before markdown processing
+  const processedContent = content.replace(
+    /:::tableau\n([\s\S]*?)\n:::/g,
+    (match, blockContent) => {
+      const lines = blockContent.trim().split('\n');
+      const props: Record<string, string> = {};
+      
+      lines.forEach((line: string) => {
+        const [key, value] = line.split(': ').map((s: string) => s.trim());
+        if (key && value) {
+          props[key] = value;
+        }
+      });
+      
+      return `<div class="tableau-embed" data-src="${props.src}" data-width="${props.width || '100%'}" data-height="${props.height || '600'}" data-device="${props.device || 'desktop'}">
+        <div style="height: ${props.height || '600'}px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border: 2px dashed #d1d5db; border-radius: 8px;">
+          <p style="color: #6b7280; font-size: 14px;">Loading Tableau visualization...</p>
+        </div>
+      </div>`;
+    }
+  );
 
   // Render the markdown content
-  const htmlContent = marked(content) as string;
+  const htmlContent = marked(processedContent) as string;
   
   return (
     <div className="prose prose-lg max-w-none">

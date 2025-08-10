@@ -25,15 +25,17 @@
 
 ## 🎯 **Scenario: What is "Koopa"?** {#scenario-what-the-heck-is-koopa}
 
-Hey there. My name is Brady Gerber. I'm a writer and music journalist who contributes to New York Magazine, Pitchfork, The Hollywood Reporter, and more (check out [my past work](https://bradygerber.com/)) and I'm writing a book proposal about the history and evolution of video game music (VGM). I have a software engineering background, I write about AI (I recently published a guide on using AI not terribly: [*The Elements of Artificial Intelligence*](https://bradygerber.com/the-elements-of-artificial-intelligence/)), and I just earned my [Google Data Analytics Professional Certificate](https://grow.google/certificates/data-analytics/), since I'm getting more into data analytics. I want to use my skills and new knowledge to expand my book research and understand what VGM I've deemed historically important (which you can't neatly quantify), what VGM is actually popular (which you can), and the relationship between the two.
+Hey there. My name is Brady Gerber. I'm a writer and music journalist who contributes to New York Magazine, Pitchfork, The Hollywood Reporter, and more (check out [my past work](https://bradygerber.com/)) and I'm writing a book proposal about the history and evolution of video game music (VGM).
 
-**The question:** Can I use public music streaming data to help me expand and create a "new" modern VGM canon, and would I be shocked by the results?
+I also have a software engineering background, I write about AI (I recently published a guide on using AI not terribly: [*The Elements of Artificial Intelligence*](https://bradygerber.com/the-elements-of-artificial-intelligence/)), and I just earned my [Google Data Analytics Professional Certificate](https://grow.google/certificates/data-analytics/), since I'm getting more into data analytics.
+
+I want to use my skills and new knowledge to expand my book research and understand what VGM I've deemed historically important (which you can't neatly quantify), what VGM is actually popular (which you can), and the relationship between the two.
+
+**The question:** Can I use public music streaming data to help me create and expand a "new" list of the most beloved VGM of all time, and would I be shocked by the results?
 
 I'm organizing the results like my own Billboard Hot 100 chart. I'm calling it "Koopa."
 
 Yes, [*that* Koopa](https://en.wikipedia.org/wiki/Koopa_Troopa).
-
-> **Spoiler:** I wasn't too shocked by the results, but the big picture analysis is interesting. A LOT of Mario. I also grossly underestimated how much people love Cyberpunk 2077 and ULTRAKILL. You can jump ahead to see the [final results](/).
 
 ---
 
@@ -385,7 +387,7 @@ With a clean dataset of 45 VGM tracks, it was time to dive into the analysis and
 ### **Key Business Insights & Data Patterns**
 
 **🎯 Top-Performing Franchises:**
-- **Nintendo representation:** 38% of all tracks are from Mario, Zelda, or Donkey Kong franchises
+- **Nintendo representation:** 42% of all tracks are from Mario, Zelda, or Donkey Kong franchises
 - **Modern hits emerge:** Cyberpunk 2077 (#1) and ULTRAKILL (#7, #11, #14) show strong contemporary appeal
 - **Classic VGM's lasting appeal:** Only 9% of tracks have Spotify releases credited before 2010, but 56% of games were originally released before 2010, showing classic VGM's enduring popularity through streaming platforms
 
@@ -604,50 +606,130 @@ So yes, we discovered a lot of good stuff. Now let's make it look pretty.
 ### **Visualization Strategy & Design Process**
 
 **Initial Sketching & Planning:**
-Before diving into Tableau Public, I decided on three core visualizations:
+Before diving into Tableau, I decided on six core visualizations:
 
-1. **Cross-Platform Correlation (Scatter)** - Comparing Spotify popularity scores vs. YouTube views.
-2. **Top 10 Performers (Bar)** - Visualizing what mix of curated and discovery tracks made it into the top.
-3. **Discovery Distribution (Pie)** - Comparing overall blend of curated and discovery tracks.
+- **Publisher Dominance (Bar)** - Nintendo's 42% dominance across all tracked VGM
+- **Superstar Tracks (Scatter)** - Cross-platform performance correlation (r = 0.663) with 17 highlighted superstar tracks
+- **Game Releases by Decade (Bar)** - 56% of games released before 2010 vs 44% after 2010
+- **Spotify Releases by Decade (Bar)** - Only 9% of Spotify tracks credited before 2010 vs 91% after 2010
+- **IP Analysis (Bar)** - Mario leads with 22% of calculated intellectual property
+- **Cover vs Original Performance (Pie)** - Performance comparison between covers and original tracks
 
-### **Current Dashboard: Video Game Music Canon Analysis**
-
-![Video Game Music Canon Dashboard](tableau_dashboard_v1.png)
-*Interactive Tableau dashboard showing cross-platform correlation, top performers, and discovery methods*
+### **Current Dashboard: Koopa Video Game Music Streaming Analysis**
 
 **Dashboard Overview:**
-My [Tableau Public dashboard](https://public.tableau.com/views/VideoGameMusicCanonAnalysis/OverallAnalysisDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) features three interconnected visualizations that answer the core business questions:
 
-**🎯 Chart 1: Cross-Platform Correlation (Scatter Plot)**
-- **Visual Type:** Scatter plot with trend line
-- **Key Insight:** Strong positive correlation (r = 0.663) between Spotify popularity and YouTube views
-- **Data Points:** 45 tracks color-coded by discovery method (orange = data-driven, blue = expert curated)
-- **Notable Outliers:** Cyberpunk 2077 (78 popularity, 62M views) and Halo (54 popularity, 52M views) stand out as cross-platform superstars
-- **Business Value:** Proves unified content strategy works across streaming platforms
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard
+width: 100%
+height: 1000
+device: desktop
+:::
 
-**📈 Chart 2: Top 10 Performers (Bar Chart)**
+My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) features six visualizations that reveal this case study's key findings:
+
+**🎯 Chart 1: Publisher Dominance (Bar Chart)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Sheet1
+width: 100%
+height: 600
+device: desktop
+:::
+
 - **Visual Type:** Horizontal bar chart
-- **Key Insight:** Mix of curated and discovery tracks in top performers validates hybrid approach
-- **Top Tracks:** "I Really Want to Stay at Your House" (78), "Sweden" (70), "The Last of Us" (63)
-- **Discovery Mix:** 4 expert curated (blue) vs 6 data-driven discovery (orange) in top 10
-- **Business Value:** Shows curated picks can compete with algorithm-discovered tracks
+- **Key Insight:** Nintendo dominates with 42% market share across all VGM tracks
+- **Data Points:** Primary publisher analysis showing Nintendo's overwhelming presence
+- **Business Value:** Demonstrates the strategic importance of established gaming franchises
+- **[View Chart 1 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Sheet1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
-**🎮 Chart 3: Discovery Methods (Pie Chart)**
-- **Visual Type:** Pie chart
-- **Key Insight:** 69% data-driven discovery (31 tracks) vs 31% expert curated (14 tracks)
-- **Balance:** Hybrid approach ensures both popular trends and cultural significance
-- **Business Value:** Demonstrates methodology transparency and balanced curation strategy
+**📈 Chart 2: Superstar Tracks (Scatter Plot)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart2SuperstarTracks
+width: 100%
+height: 600
+device: desktop
+:::
+
+- **Visual Type:** Scatter plot with trend line and superstar highlighting
+- **Key Insight:** Strong positive correlation (r = 0.663) between Spotify popularity and YouTube views
+- **Data Points:** 45 tracks with 17 highlighted as "superstar" performers
+- **Notable Outliers:** Cyberpunk 2077 and ULTRAKILL emerge as modern cross-platform hits
+- **Business Value:** Proves unified content strategy works across streaming platforms
+- **[View Chart 2 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart2SuperstarTracks?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+**🎮 Chart 3A: Game Releases by Decade (Bar Chart)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart3AGameReleases
+width: 100%
+height: 600
+device: desktop
+:::
+
+- **Visual Type:** Side-by-side bar chart (before/after 2010)
+- **Key Insight:** 56% of games were originally released before 2010 vs 44% after 2010
+- **Data Points:** Temporal analysis showing classic VGM's lasting appeal
+- **Business Value:** Reveals the enduring popularity of retro gaming soundtracks
+- **[View Chart 3A →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart3GameReleasesByDecade?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+**📊 Chart 3B: Spotify Releases by Decade (Bar Chart)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart3BSpotifyReleases
+width: 100%
+height: 600
+device: desktop
+:::
+
+- **Visual Type:** Side-by-side bar chart (before/after 2010)
+- **Key Insight:** Only 9% of Spotify tracks are credited before 2010 vs 91% after 2010
+- **Data Points:** Release gap analysis between original games and streaming availability
+- **Business Value:** Shows the streaming ecosystem thrives on delayed releases and fan-driven content
+- **[View Chart 3B →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart4SpotifyReleasesByDecade?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+**🏆 Chart 4: IP Analysis (Bar Chart)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart4IPAnalysis
+width: 100%
+height: 600
+device: desktop
+:::
+
+- **Visual Type:** Horizontal bar chart with size encoding
+- **Key Insight:** Mario leads with 22% of calculated intellectual property
+- **Data Points:** Game franchise analysis with performance ranking integration
+- **Business Value:** Demonstrates the commercial power of established gaming IP
+- **[View Chart 4 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart5IPAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+**🎵 Chart 5: Cover vs Original Performance (Pie Chart)**
+
+:::tableau
+src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart5OriginalsvsCovers
+width: 100%
+height: 600
+device: desktop
+:::
+
+- **Visual Type:** Pie chart with performance comparison
+- **Key Insight:** Performance analysis between covers and original tracks
+- **Data Points:** Song authenticity impact on streaming popularity
+- **Business Value:** Reveals audience preferences and licensing opportunities
+- **[View Chart 5 →](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/Chart6CoverVsOriginal?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 ### **Future Visualization Opportunities**
 
-**Potential Additional Charts:**
-Based on the comprehensive analysis, these additional visualizations could enhance the story:
+**Additional Charts for Future Development:**
+While our current dashboard covers the core insights, these additional visualizations could further enhance the story:
 
-1. **Release Year Timeline** - Show the 30-year span and temporal trends
+1. **Release Year Timeline** - Show the 30-year span and temporal trends in more detail
 2. **Platform Performance Heat Map** - Visualize which gaming platforms produce the most popular VGM
-3. **Developer/Publisher Analysis** - Compare performance across major studios
-4. **Cover vs Original Performance** - Analyze the impact of song authenticity
-5. **Outlier Analysis** - Highlight and explain unusual performers
+3. **Developer/Publisher Analysis** - Compare performance across major studios beyond Nintendo
+4. **Outlier Analysis** - Highlight and explain unusual performers with detailed annotations
+5. **Seasonal Trends** - Analyze if VGM popularity varies by season or release timing
+6. **International Market Analysis** - Explore VGM popularity across different regions
 
 ---
 
@@ -740,10 +822,10 @@ Streaming data successfully identifies a new VGM canon that balances historical 
 - **Cross-validation is crucial:** Spotify + YouTube correlation validated our methodology
 - **Context matters:** Game metadata (release dates, genres, platforms) enriched the analysis significantly
 
+
+
 Thanks for reading!
 
 Now go outside or read a book.
 
 :)
-
-[![Koopa says goodbye for now](Koopa_Troopa_by_Shigehisa_Nakaue.png)](https://en.wikipedia.org/wiki/Koopa_Troopa)

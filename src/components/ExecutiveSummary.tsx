@@ -5,14 +5,14 @@ import React from 'react';
 export default function ExecutiveSummary() {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 mb-8 border-l-4 border-koopa-green">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">📊 Executive Summary</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">📊 Summary</h2>
       
       {/* Top row: What is Koopa and Project Scope/Tableau side by side */}
       <div className="grid md:grid-cols-2 gap-6 mb-4">
         <div>
           <h3 className="text-lg font-semibold text-koopa-green mb-2">What is Koopa?</h3>
           <p className="text-gray-700 mb-3">
-            A data-driven analysis of video game music (VGM) popularity using <strong>Spotify and YouTube streaming data</strong>. Think of it like a Billboard chart for video game music—identifying which tracks are actually being listened to today, not just historically important.
+            Koopa is a data-driven analysis of video game music (VGM) popularity using <strong>Spotify and YouTube streaming data</strong>. Think of it like a Billboard chart for video game music—identifying which tracks are actually being listened to today, not just historically important.
           </p>
           <h3 className="text-lg font-semibold text-koopa-green mb-2">My Takeaway</h3>
           <p className="text-gray-700 italic">
@@ -31,7 +31,7 @@ export default function ExecutiveSummary() {
               <strong>📊 Interactive Dashboard:</strong> Explore the full analysis with interactive visualizations
             </p>
             <a 
-              href="https://public.tableau.com/views/VideoGameMusicCanonAnalysis/OverallAnalysisDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
+              href="https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-koopa-green hover:text-koopa-green-dark font-semibold"
@@ -42,13 +42,15 @@ export default function ExecutiveSummary() {
         </div>
       </div>
       
+
+      
       {/* Bottom row: Key Insights in two columns */}
       <div>
         <h3 className="text-lg font-semibold text-koopa-green mb-2">Key Insights</h3>
         <div className="flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-6">
           <div>
             <ul className="text-gray-700 space-y-2">
-              <li>• <strong>38%</strong> of tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
+              <li>• <strong>42%</strong> of tracks are from Nintendo franchises (Mario, Zelda, Donkey Kong)</li>
               <li>• <strong>24%</strong> of tracks have Spotify popularity scores above 50 (out of 100 - indicating strong current listenership)</li>
               <li>• <strong>Only 9%</strong> of tracks have Spotify releases credited before 2010, but <strong>56%</strong> of games were originally released before 2010, showing classic VGM&apos;s lasting appeal through streaming platforms</li>
               <li>• <strong>38% covers</strong> performed well but <strong>33% originals</strong> showed slightly better engagement</li>

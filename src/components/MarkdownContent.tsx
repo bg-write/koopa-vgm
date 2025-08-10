@@ -255,7 +255,9 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           if (window.innerWidth < 768) {
             tableauViz.setAttribute('device', 'phone');
             tableauViz.style.width = '100%';
-            tableauViz.style.height = '400px';
+                            // Ensure mobile has enough height to see full chart content
+                const mobileHeight = Math.min(parseInt(height), 550);
+                tableauViz.style.height = `${mobileHeight}px`;
           }
           
           // Add error handling
@@ -351,8 +353,8 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         }
       });
       
-      return `<div class="tableau-embed" data-src="${props.src}" data-width="${props.width || '100%'}" data-height="${props.height || '600'}" data-device="${props.device || 'desktop'}">
-        <div style="height: ${props.height || '600'}px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border: 2px dashed #d1d5db; border-radius: 8px; min-height: 400px;" role="status" aria-label="Loading Tableau visualization">
+      return `<div class="tableau-embed" style="margin-bottom: 4rem !important;" data-src="${props.src}" data-width="${props.width || '100%'}" data-height="${props.height || '600'}" data-device="${props.device || 'desktop'}">
+        <div style="height: ${props.height || '600'}px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border: 2px dashed #d1d5db; border-radius: 8px; min-height: 400px; padding-bottom: 8px;" role="status" aria-label="Loading Tableau visualization">
           <div style="text-align: center;">
             <p style="color: #6b7280; font-size: 14px; margin: 0 0 8px 0;">Loading Tableau visualization...</p>
             <p style="color: #9ca3af; font-size: 12px; margin: 0;">Please wait while the interactive chart loads</p>
@@ -376,6 +378,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         }
         .tableau-embed {
           transition: all 0.3s ease;
+          margin-bottom: 2rem;
         }
         .tableau-embed:hover {
           transform: translateY(-2px);
@@ -383,8 +386,16 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         }
         @media (max-width: 768px) {
           .tableau-embed {
-            margin: 0 -1rem;
+            margin: 0 -1rem 1.5rem -1rem;
             border-radius: 0;
+          }
+          /* Ensure proper spacing between chart sections on mobile */
+          .markdown-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+          }
+          .markdown-content img {
+            margin: 1rem 0;
           }
         }
       `}</style>

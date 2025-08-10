@@ -658,16 +658,18 @@ Before diving into Tableau, I decided on six core visualizations:
 
 ### **Current Dashboard: Koopa Video Game Music Streaming Analysis**
 
+My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). (If reading on mobile, please read on desktop or click on the link for best dashboard view.)
+
 **Dashboard Overview:**
 
 :::tableau
 src: https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard
 width: 100%
-height: 1000
+height: 600
 device: desktop
 :::
 
-My [Tableau Public dashboard](https://public.tableau.com/views/KoopaVideoGameMusicStreamingData/KoopaDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) features six visualizations that reveal this case study's key findings:
+---
 
 **🎯 Chart 1: Publisher Dominance (Bar Chart)**
 

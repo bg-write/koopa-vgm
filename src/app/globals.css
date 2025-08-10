@@ -159,6 +159,78 @@
   @apply max-w-full h-auto rounded-lg shadow-lg;
 }
 
+/* Tableau embed spacing */
+.tableau-embed {
+  margin-bottom: 4rem !important;
+  margin-top: 1rem !important;
+  position: relative !important;
+}
+
+/* Ensure Tableau content doesn't overflow its container */
+.tableau-embed tableau-viz {
+  display: block !important;
+  position: relative !important;
+}
+
+/* Additional containment for Tableau content */
+.tableau-embed > * {
+  position: relative !important;
+}
+
+
+
+/* Add bottom margin to the last chart element within Tableau */
+.tableau-embed > *:last-child {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Mobile-specific spacing and layout fixes */
+@media (max-width: 768px) {
+  .markdown-content h2 {
+    @apply mt-6 mb-3;
+  }
+  
+  /* Extra spacing for the first chart heading on mobile */
+  .markdown-content h2:first-of-type {
+    margin-top: 4.5rem !important;
+  }
+  
+  .markdown-content h3 {
+    @apply mt-4 mb-2;
+  }
+  
+  .markdown-content img {
+    @apply mb-4;
+    margin-top: 1rem;
+  }
+  
+  .markdown-content p {
+    @apply mb-3;
+  }
+  
+  .markdown-content ul,
+  .markdown-content ol {
+    @apply mb-3 pl-4;
+  }
+  
+  /* Additional spacing for Tableau embeds on mobile */
+  .tableau-embed {
+    margin-bottom: 3.5rem !important;
+  }
+  
+  /* Ensure proper separation between chart sections */
+.markdown-content h2:first-of-type {
+  margin-top: 5rem !important;
+}
+  
+  /* Mobile-specific Tableau content containment */
+  .tableau-embed tableau-viz {
+    display: block !important;
+  }
+  
+
+}
+
 /* Specific image styling */
 .markdown-content img[src*="tableau_dashboard_v1"] {
   @apply border-2 border-black;

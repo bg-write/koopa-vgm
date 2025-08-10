@@ -43,20 +43,20 @@ export default function FloatingToC({ sections }: FloatingToCProps) {
 
   return (
     <div 
-      className="fixed bottom-6 right-6 z-[9999]"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999]"
     >
       {/* Floating Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 pointer-events-auto"
+        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 hover:scale-110 pointer-events-auto"
         aria-label={isExpanded ? "Collapse table of contents" : "Expand table of contents"}
       >
         {isExpanded ? (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         )}
@@ -64,7 +64,7 @@ export default function FloatingToC({ sections }: FloatingToCProps) {
 
       {/* Expanded ToC */}
       {isExpanded && (
-        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 max-h-96 overflow-y-auto">
+        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl border border-gray-200 p-3 md:p-4 w-72 md:w-80 max-h-96 overflow-y-auto">
           <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
             <span className="mr-2">📋</span>
             Quick Navigation
